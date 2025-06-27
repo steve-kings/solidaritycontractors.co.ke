@@ -30,11 +30,11 @@
             --shadow-glow: 0 0 40px rgba(5, 150, 105, 0.15);
             
             --hero-image-1: url('/images/african-american-lady-safety-helmet-with-notebook-near-building-construction.jpg');
-            --hero-image-2: url('/images/working-housing-project.jpg');
-            --hero-image-3: url('/images/tent\ 10.jpg');
-            --construction-image: url('/images/african-american-lady-safety-helmet-with-notebook-near-building-construction.jpg');
-            --landscaping-image: url('/images/landscaper\ hero.jpg');
-            --events-image: url('/images/IMG-20250604-WA0022.jpg');
+            --hero-image-2: url('/images/landscape\ image3.jpg');
+            --hero-image-3: url('/images/tent\ 5.jpg');
+            --construction-image: url('/images/IMG-20250604-WA0011.jpg');
+            --landscaping-image: url('/images/slb/IMG_6339.jpg');
+            --events-image: url('/images/tent\ 15.jpg');
             --logo-image: url('/sbl\ logo\ 1.jpg');
         }
 
@@ -53,6 +53,23 @@
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .col-lg-6, .col-md-6, .col-lg-4, .col-md-4, .col-lg-3, .col-md-3, .col-lg-8, .col-lg-2 {
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         @keyframes fadeInUp {
@@ -383,6 +400,7 @@
             box-shadow: var(--shadow-large);
             padding: 20px;
             overflow-y: auto;
+            max-width: 85vw;
         }
 
         .mobile-sidebar.active {
@@ -1104,13 +1122,6 @@
             color: var(--primary-color);
         }
 
-        .footer-bottom {
-            border-top: 1px solid #475569;
-            padding-top: 40px;
-            text-align: center;
-            color: #94a3b8;
-        }
-
         @media (max-width: 992px) {
             .content-section.reverse {
                 flex-direction: column;
@@ -1138,25 +1149,43 @@
             .top-header {
                 text-align: center;
                 padding: 8px 0;
+                font-size: 10px;
             }
 
             .contact-info {
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 10px;
+                font-size: 10px;
+            }
+
+            .contact-info span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 150px;
+                font-size: 10px;
             }
 
             .social-header {
                 justify-content: center;
-                margin-top: 10px;
+                margin-top: 8px;
             }
 
             .hero-title {
                 font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
             }
 
             .hero-cta {
                 justify-content: center;
+                gap: 15px;
             }
 
             .floating-buttons {
@@ -1172,6 +1201,7 @@
 
             .hero-slider-container {
                 height: 400px;
+                margin-top: 30px;
             }
 
             .stat-number {
@@ -1192,6 +1222,8 @@
                 width: 100%;
                 max-width: 320px;
                 text-align: center;
+                padding: 16px 30px;
+                font-size: 16px;
             }
 
             .content-text {
@@ -1204,6 +1236,38 @@
 
             .section-title {
                 font-size: 2.2rem;
+                line-height: 1.3;
+                margin-bottom: 20px;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 50px;
+            }
+
+            .content-title {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+
+            .content-description {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .hero-section {
+                padding: 30px 0;
+                min-height: 70vh;
+            }
+
+            .mobile-sidebar {
+                width: 320px;
+                padding: 15px;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
             }
         }
 
@@ -1213,20 +1277,188 @@
             }
 
             .hero-slide-content {
-                padding: 20px;
-                max-width: 90%;
+                padding: 15px;
+                max-width: 95%;
             }
 
             .hero-slide-content h3 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+                line-height: 1.2;
+                margin-bottom: 10px;
             }
 
             .hero-slide-content p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+                line-height: 1.4;
             }
 
             .content-image {
                 height: 250px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .top-header {
+                font-size: 9px;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                gap: 8px;
+            }
+
+            .contact-info span {
+                max-width: 120px;
+                font-size: 9px;
+            }
+
+            .mobile-sidebar {
+                width: 280px;
+                padding: 12px;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                padding: 14px 25px;
+                font-size: 14px;
+                max-width: 280px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .content-title {
+                font-size: 1.6rem;
+                line-height: 1.2;
+            }
+
+            .feature-card {
+                padding: 30px 20px;
+            }
+
+            .feature-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-card p {
+                font-size: 0.95rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .hero-nav {
+                bottom: 20px;
+                padding: 8px 12px;
+            }
+
+            .hero-dot {
+                width: 12px;
+                height: 12px;
+            }
+
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+                gap: 10px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-sidebar {
+                width: 250px;
+                padding: 10px;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .top-header {
+                font-size: 8px;
+                padding: 5px 0;
+            }
+
+            .contact-info span {
+                max-width: 100px;
+                font-size: 8px;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                padding: 12px 20px;
+                font-size: 13px;
+                max-width: 250px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .content-title {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .mobile-sidebar {
+                width: 90vw;
+                max-width: 300px;
+            }
+
+            .hero-title {
+                font-size: 1.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                padding: 10px 18px;
+                font-size: 12px;
+                max-width: 220px;
+            }
+
+            .hero-slider-container {
+                height: 280px;
+            }
+
+            .container {
+                padding-left: 5px;
+                padding-right: 5px;
             }
         }
     </style>
@@ -1372,14 +1604,14 @@
                                 <i class="fas fa-heart me-2"></i>Meet Our Team
                             </a>
                         </div>
-                        <div class="d-flex align-items-center gap-4 mt-4 flex-wrap">
+                        <div class="d-flex align-items-center gap-3 mt-4 flex-wrap justify-content-center justify-content-lg-start">
                             <div class="d-flex align-items-center gap-2">
                                 <i class="fas fa-users" style="color: var(--primary-color);"></i>
-                                <span><strong>500+</strong> Happy clients</span>
+                                <span style="font-size: 0.9rem;"><strong>500+</strong> Happy clients</span>
                             </div>
                             <div class="d-flex align-items-center gap-2">
                                 <i class="fas fa-heart" style="color: var(--secondary-color);"></i>
-                                <span><strong>10 Years</strong> of Love & Service</span>
+                                <span style="font-size: 0.9rem;"><strong>10 Years</strong> of Love & Service</span>
                             </div>
                         </div>
                     </div>
