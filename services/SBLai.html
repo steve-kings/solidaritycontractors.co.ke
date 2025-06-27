@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine Landscapers Virtual Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/marked/marked.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#22C55E',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .chat-container {
+            height: calc(100vh - 200px);
+            min-height: 400px;
+        }
+        .message-bubble {
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .typing-indicator {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        .plant-card:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-primary to-secondary p-6 text-white">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <span class="text-2xl">🌿</span>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">Catherine Landscapers</h1>
+                    <p class="text-green-100">Virtual Plant Assistant</p>
+                </div>
+            </div>
+            <div class="mt-4 text-sm">
+                <p>📍 Nyeri - Karatina Highway</p>
+                <p>📞 0772255033 / +254 723 821 151</p>
+                <p class="italic">"At your service with lots of love and passion"</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="p-4 bg-gray-50 dark:bg-gray-700 border-b">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Quick Questions:</p>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="askQuestion('What plants do you have for indoor use?')" 
+                        class="px-3 py-1 bg-primary text-white rounded-full text-sm hover:bg-primary/80 transition-colors">
+                    Indoor Plants
+                </button>
+                <button onclick="askQuestion('Show me outdoor plants for landscaping')" 
+                        class="px-3 py-1 bg-secondary text-white rounded-full text-sm hover:bg-secondary/80 transition-colors">
+                    Outdoor Plants
+                </button>
+                <button onclick="askQuestion('What types of planters do you sell?')" 
+                        class="px-3 py-1 bg-accent text-white rounded-full text-sm hover:bg-accent/80 transition-colors">
+                    Planters
+                </button>
+                <button onclick="askQuestion('Tell me about indigenous plants')" 
+                        class="px-3 py-1 bg-purple-500 text-white rounded-full text-sm hover:bg-purple-400 transition-colors">
+                    Indigenous Plants
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div id="chatContainer" class="chat-container overflow-y-auto p-4 space-y-4">
+            <div class="message-bubble">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                        🤖
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            Hello! I'm Catherine's AI assistant. I can help you find the perfect plants and planters for your space. 
+                            What would you like to know about our collection?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 border-t bg-white dark:bg-gray-800">
+            <div class="flex gap-2">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Ask about plants, planters, care tips..." 
+                    class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary dark:bg-gray-700 dark:text-white text-base"
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button 
+                    onclick="sendMessage()" 
+                    id="sendButton"
+                    class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const knowledgeBase = `
+CATHERINE LANDSCAPERS KNOWLEDGE BASE:
+
+BUSINESS INFO:
+- Company: Catherine Landscapers  
+- Location: Nyeri - Karatina Highway
+- Phone: 0772255033 / +254 723 821 151
+- Email: kamwetigcathril4@gmail.com
+- Tagline: "At your service with lots of love and passion"
+
+PRODUCTS WE SELL:
+1. PLANTS - We transform your landscape with beautiful plants
+2. PLANTERS - Various types to complement your plants
+
+PLANTER TYPES:
+- Clay planters (traditional, breathable)
+- Concrete planters (durable, modern)  
+- Fibre planters (lightweight, versatile)
+- Plastic planters (affordable, various colors)
+
+PLANT CATEGORIES:
+- Horticultural plants (garden enhancement)
+- Seedlings (young plants for growing)
+- Indoor plants (for homes and offices)
+- Outdoor plants (for gardens and landscaping)
+- Indigenous plants (native to Kenya)
+- Exotic plants (international varieties)
+
+OUR PLANT INVENTORY:
+INDOOR PLANTS: Spider plant, Corn plant, Arrowroot/prayer plant, Painted leaf begonia, Calathea miris, Rubber tree, Zebra plant, Chinese hibiscus, Blushing philodendron, Golden shrimp plant
+
+OUTDOOR PLANTS: Monterey cypress, Blue jacaranda, Oriental arborvitae, New Zealand flax, Bush willows, Tamarind, Golden bamboo, Cape honeysuckle, Foxtail agave, Burmese fishtail palm
+
+HORTICULTURAL: Garden croton, Chinese hibiscus, Ti plant, Blue jacaranda, Cape honeysuckle, Poinsettia, Traveller's palm, Flamingo flower, Horseshoe geranium
+
+FRUIT PLANTS: Soursop, Pomegranate, Guava, Jack fruit, Sugar apple, Java plum, European plum
+
+DECORATIVE: Madagascar periwinkle, Spanish cedar, Tropical almond, Buddhist pine, Firebush, Yellow trumpetbush, Snowrose, Red hot cat's tail, Night-blooming jasmine, Peacock flower, Paperflower, Silky oak, Golden bamboo, Pohutukawa
+
+TREES: Cherry laurel, Olive, Mulberry, Apple, Dwarf umbrella tree, Lemon grass, Dragon fruit, Parlor palm, Common lantana, Sisal, Golden dewdrop, Blood leaf, Golden leather fern, Crimson bottlebrush, Beach naupaka, Persian silk tree, Royal poinciana, Yellow butterfly palm, Kentia palm, Fiddle leaf fig, African tulip tree, Mexican cypress, West Indian balsa, Weeping lovegrass, Siberian dogwood
+
+CARE TIPS:
+- Indoor plants: Place near windows for indirect sunlight
+- Outdoor plants: They love natural light and open air
+- Watering: Depends on plant type and season
+- Soil: We can recommend appropriate soil types
+
+ORDERING: When customers want to order, provide WhatsApp link for easy ordering
+`;
+
+        let isWaitingForResponse = false;
+
+        // Register AI response handler
+        if (window.Poe) {
+            window.Poe.registerHandler("plant-assistant", (result, context) => {
+                const responses = result.responses;
+                if (responses && responses.length > 0) {
+                    const message = responses[0];
+                    
+                    if (message.status === "error") {
+                        addMessage("Sorry, I encountered an error. Please try again.", "bot", true);
+                        isWaitingForResponse = false;
+                        toggleSendButton(true);
+                    } else if (message.status === "incomplete") {
+                        updateTypingMessage(message.content);
+                    } else if (message.status === "complete") {
+                        finalizeResponse(message.content);
+                        isWaitingForResponse = false;
+                        toggleSendButton(true);
+                    }
+                }
+            });
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                sendMessage();
+            }
+        }
+
+        function askQuestion(question) {
+            document.getElementById('messageInput').value = question;
+            sendMessage();
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message || isWaitingForResponse) return;
+            
+            // Add user message
+            addMessage(message, "user");
+            input.value = '';
+            
+            // Show typing indicator
+            addTypingIndicator();
+            isWaitingForResponse = true;
+            toggleSendButton(false);
+            
+            // Prepare AI prompt with knowledge base
+            const aiPrompt = `You are Catherine Landscapers' virtual assistant. Use this knowledge base to answer customer questions about plants and planters:
+
+${knowledgeBase}
+
+IMPORTANT INSTRUCTIONS:
+1. Always be helpful, friendly, and professional
+2. If asked about a specific plant, provide details about care, category, and suitability
+3. When customers show interest in purchasing, offer to help them order via WhatsApp
+4. If you don't know something specific, suggest they contact us directly
+5. Keep responses conversational but informative
+6. Focus on helping customers find the right plants for their needs
+
+Customer Question: ${message}
+
+Please provide a helpful response as Catherine Landscapers' AI assistant.`;
+
+            try {
+                if (window.Poe) {
+                    await window.Poe.sendUserMessage(`@Claude-Sonnet-4 ${aiPrompt}`, {
+                        handler: "plant-assistant",
+                        stream: true,
+                        openChat: false
+                    });
+                } else {
+                    // Fallback response if Poe API not available
+                    setTimeout(() => {
+                        finalizeResponse("I'm here to help with your plant questions! However, the AI service is currently unavailable. Please contact us directly at 0772255033 for immediate assistance.");
+                        isWaitingForResponse = false;
+                        toggleSendButton(true);
+                    }, 1000);
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                finalizeResponse("I'm sorry, there was an error processing your request. Please try again or contact us directly at 0772255033.");
+                isWaitingForResponse = false;
+                toggleSendButton(true);
+            }
+        }
+
+        function addMessage(message, sender, isError = false) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message-bubble';
+            
+            const isUser = sender === 'user';
+            const bgColor = isError ? 'bg-red-100 dark:bg-red-900' : 
+                           isUser ? 'bg-primary text-white' : 'bg-gray-100 dark:bg-gray-700';
+            const textColor = isUser ? 'text-white' : 'text-gray-800 dark:text-gray-200';
+            const alignment = isUser ? 'justify-end' : 'justify-start';
+            
+            messageDiv.innerHTML = `
+                <div class="flex ${alignment} gap-3">
+                    ${!isUser ? '<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">🤖</div>' : ''}
+                    <div class="${bgColor} rounded-lg p-3 max-w-sm ${textColor}">
+                        <div class="text-sm">${marked.parse(message)}</div>
+                        ${message.toLowerCase().includes('order') || message.toLowerCase().includes('buy') || message.toLowerCase().includes('purchase') ? 
+                            `<div class="mt-3 pt-3 border-t border-white/20">
+                                <button onclick="openWhatsApp('${message}')" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                    💬 Order via WhatsApp
+                                </button>
+                            </div>` : ''}
+                    </div>
+                    ${isUser ? '<div class="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">👤</div>' : ''}
+                </div>
+            `;
+            
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function addTypingIndicator() {
+            const chatContainer = document.getElementById('chatContainer');
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typingIndicator';
+            typingDiv.className = 'message-bubble';
+            
+            typingDiv.innerHTML = `
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">🤖</div>
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <div class="typing-indicator text-gray-500 dark:text-gray-400">
+                            Catherine's assistant is typing...
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            chatContainer.appendChild(typingDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function updateTypingMessage(content) {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                const contentDiv = typingIndicator.querySelector('.typing-indicator');
+                if (contentDiv) {
+                    contentDiv.innerHTML = marked.parse(content);
+                    contentDiv.className = 'text-gray-800 dark:text-gray-200';
+                }
+            }
+        }
+
+        function finalizeResponse(content) {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+            
+            // Add WhatsApp button if the response suggests ordering
+            const shouldShowWhatsApp = content.toLowerCase().includes('order') || 
+                                     content.toLowerCase().includes('purchase') || 
+                                     content.toLowerCase().includes('buy') ||
+                                     content.toLowerCase().includes('contact');
+            
+            if (shouldShowWhatsApp) {
+                content += `\n\n**Ready to order?** Click the WhatsApp button below to get started!`;
+            }
+            
+            addMessage(content, "bot");
+        }
+
+        function toggleSendButton(enabled) {
+            const button = document.getElementById('sendButton');
+            const input = document.getElementById('messageInput');
+            
+            button.disabled = !enabled;
+            input.disabled = !enabled;
+            
+            if (enabled) {
+                button.textContent = 'Send';
+                button.className = 'px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50';
+            } else {
+                button.textContent = 'Sending...';
+                button.className = 'px-6 py-2 bg-gray-400 text-white rounded-lg cursor-not-allowed';
+            }
+        }
+
+        function openWhatsApp(context = '') {
+            const phone = '254772255033'; // Kenya format without +
+            const message = encodeURIComponent(`Hello Catherine Landscapers! I'm interested in your plants and planters. ${context ? 'I was asking about: ' + context : 'I would like to place an order or get more information.'}`);
+            const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('messageInput').focus();
+        });
+    </script>
+</body>
+</html>

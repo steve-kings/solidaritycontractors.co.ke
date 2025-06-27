@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Professional construction services in Nyeri. Residential and commercial building construction, renovations, and project management.">
+    <meta name="keywords" content="construction Nyeri, building contractors Kenya, residential construction, commercial buildings, renovations Nyeri">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Top Header - Made smaller */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation with click-based dropdown */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Navigation item with dropdown structure */
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .main-nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link.active::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        /* Click-based dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(80px) scale(0.9);
+            transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-100px) rotate(-10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(100px) rotate(10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-up {
+            opacity: 0;
+            transform: translateY(100px) scale(0.8);
+            transition: all 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-up.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-zoom {
+            opacity: 0;
+            transform: scale(0.3) rotate(45deg);
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .scroll-reveal-zoom.revealed {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .stagger-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .stagger-animation.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .bounce-in.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .fade-slide {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .fade-slide.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modern Hero Section with Creative Slider */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-swiper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.8) 0%, rgba(239, 68, 68, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 70%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            max-width: 600px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            background: white;
+            color: var(--secondary-color);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-large);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            color: var(--secondary-color);
+        }
+
+        .btn-hero-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Custom navigation for hero slider */
+        .hero-navigation {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-nav-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .hero-nav-dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        .hero-nav-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-nav-dot.active::after {
+            opacity: 1;
+        }
+
+        /* Services Section */
+        .construction-services {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: var(--shadow-large);
+            border-color: var(--secondary-color);
+        }
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .service-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .service-features li {
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .service-features i {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .btn-service {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-service:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 0;
+            background: var(--gradient-secondary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .stats-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 120px 0;
+            background: var(--light-color);
+        }
+
+        .content-row {
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+        }
+
+        .content-description {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.6s ease;
+        }
+
+        .content-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* CTA Section */
+        .cta-construction {
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-construction::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/images/IMG-20250604-WA0018.jpg') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        .cta-text-large {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--primary-color);
+            padding: 18px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: var(--primary-color);
+        }
+
+        .btn-cta-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-cta-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer p, .footer li {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-2px);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .hero-section {
+                height: 80vh;
+                min-height: 600px;
+            }
+
+            .hero-content {
+                max-width: 95%;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-title-large {
+                font-size: 2.2rem;
+            }
+
+            .service-card {
+                padding: 40px 30px;
+            }
+
+            .content-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-hero-primary,
+            .btn-hero-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .mobile-sidebar {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header - Made smaller -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation with Click-based Dropdown -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="/sbl logo 1.jpg" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="/services/services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="/services/buildingmateral.html">Building Materials</a></li>
+                            <li><a href="/services/construction.html" class="active">Construction</a></li>
+                            <li><a href="/services/equipment hire.html">Equipment Hire</a></li>
+                            <li><a href="/services/events.html">Events</a></li>
+                            <li><a href="/services/landscaping.html">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about us.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="buildingmaterial.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Modern Hero Section with Creative Slider -->
+    <section class="hero-section">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Residential Construction -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="container">
+                        <div class="hero-content scroll-reveal-zoom">
+                            <div class="hero-badge">
+                                <i class="fas fa-home"></i>
+                                <span>Residential Construction Excellence</span>
+                            </div>
+                            <h1 class="hero-title">
+                                Building Dream Homes<br>
+                                With Expert Craftsmanship
+                            </h1>
+                            <p class="hero-subtitle">
+                                Transform your vision into reality with our professional residential construction services. Quality materials, modern techniques, and 11+ years of experience.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">300+</span>
+                                    <span class="hero-stat-label">Homes Built</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">100%</span>
+                                    <span class="hero-stat-label">Client Satisfaction</span>
+                                </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="#contact" class="btn-hero-primary">
+                                    <i class="fas fa-phone"></i>Get Free Quote
+                                </a>
+                                <a href="#services" class="btn-hero-secondary">
+                                    <i class="fas fa-eye"></i>View Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Commercial Construction -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <i class="fas fa-building"></i>
+                                <span>Commercial Construction Solutions</span>
+                            </div>
+                            <h1 class="hero-title">
+                                Professional Commercial<br>
+                                Building Construction
+                            </h1>
+                            <p class="hero-subtitle">
+                                From office buildings to retail spaces, we deliver commercial construction projects on time and within budget with the highest quality standards.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">200+</span>
+                                    <span class="hero-stat-label">Commercial Projects</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">11+</span>
+                                    <span class="hero-stat-label">Years Experience</span>
+                                </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="#contact" class="btn-hero-primary">
+                                    <i class="fas fa-phone"></i>Get Free Quote
+                                </a>
+                                <a href="#services" class="btn-hero-secondary">
+                                    <i class="fas fa-building"></i>Commercial Services
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Renovations -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <i class="fas fa-tools"></i>
+                                <span>Professional Renovations & Extensions</span>
+                            </div>
+                            <h1 class="hero-title">
+                                Transform Your Space<br>
+                                With Expert Renovations
+                            </h1>
+                            <p class="hero-subtitle">
+                                Modernize and expand your existing property with our professional renovation services. From kitchen remodels to complete home makeovers.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">500+</span>
+                                    <span class="hero-stat-label">Renovations Done</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">95%</span>
+                                    <span class="hero-stat-label">On-Time Delivery</span>
+                                </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="#contact" class="btn-hero-primary">
+                                    <i class="fas fa-phone"></i>Get Free Quote
+                                </a>
+                                <a href="#services" class="btn-hero-secondary">
+                                    <i class="fas fa-tools"></i>Renovation Services
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Navigation -->
+        <div class="hero-navigation">
+            <div class="hero-nav-dot active" onclick="goToSlide(0)"></div>
+            <div class="hero-nav-dot" onclick="goToSlide(1)"></div>
+            <div class="hero-nav-dot" onclick="goToSlide(2)"></div>
+        </div>
+    </section>
+
+    <!-- Construction Services Section -->
+    <section id="services" class="construction-services">
+        <div class="container">
+            <div class="scroll-reveal">
+                <h2 class="section-title">Our Construction Services</h2>
+                <p class="section-subtitle">Comprehensive construction solutions from foundation to finish, delivered with excellence and precision that exceeds expectations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="service-card scroll-reveal-left">
+                        <div class="service-icon bounce-in">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Residential Construction</h3>
+                        <p>Custom home construction services from foundation to finishing. We build beautiful, functional homes that reflect your style and meet your family's needs.</p>
+                        <ul class="service-features">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Custom Home Design & Build</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Foundation & Structural Work</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Electrical & Plumbing Systems</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Interior & Exterior Finishing</li>
+                        </ul>
+                        <a href="#contact" class="btn-service">
+                            <i class="fas fa-home"></i>Start Building
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="service-card scroll-reveal-right">
+                        <div class="service-icon bounce-in">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Commercial Construction</h3>
+                        <p>Professional commercial building services for offices, retail spaces, and industrial facilities. Built to code with modern standards and timely delivery.</p>
+                        <ul class="service-features">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Office Buildings & Complexes</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Retail & Shopping Centers</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Warehouses & Industrial</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Code Compliance & Permits</li>
+                        </ul>
+                        <a href="#contact" class="btn-service">
+                            <i class="fas fa-building"></i>View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="service-card scroll-reveal-left">
+                        <div class="service-icon bounce-in">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Renovations & Extensions</h3>
+                        <p>Transform your existing space with professional renovation and extension services. Modernize your home or expand your living space with expert craftsmanship.</p>
+                        <ul class="service-features">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Kitchen & Bathroom Remodeling</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Room Additions & Extensions</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Structural Modifications</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Energy Efficiency Upgrades</li>
+                        </ul>
+                        <a href="#contact" class="btn-service">
+                            <i class="fas fa-tools"></i>Plan Renovation
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="service-card scroll-reveal-right">
+                        <div class="service-icon bounce-in">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Project Management</h3>
+                        <p>Complete project management services ensuring your construction project stays on time, on budget, and meets the highest quality standards.</p>
+                        <ul class="service-features">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Timeline & Budget Management</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Quality Assurance & Control</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Permit & License Handling</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Regular Progress Updates</li>
+                        </ul>
+                        <a href="#contact" class="btn-service">
+                            <i class="fas fa-clipboard-list"></i>Manage Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-content">
+                <div class="stats-grid">
+                    <div class="stat-item scroll-reveal">
+                        <span class="stat-number" data-target="500">0</span>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item scroll-reveal">
+                        <span class="stat-number" data-target="150">0</span>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item scroll-reveal">
+                        <span class="stat-number" data-target="11">0</span>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item scroll-reveal">
+                        <span class="stat-number" data-target="24">0</span>
+                        <div class="stat-label">Hours Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Construction Process -->
+            <div class="row content-row scroll-reveal">
+                <div class="col-lg-6">
+                    <div class="content-text">
+                        <h2 class="content-title">Our Construction Process</h2>
+                        <p class="content-description">
+                            We follow a systematic approach to construction that ensures quality, efficiency, and client satisfaction. From initial consultation to final handover, every step is carefully planned and executed.
+                        </p>
+                        <p class="content-description">
+                            Our experienced team uses modern construction techniques, premium materials, and rigorous quality control measures to deliver projects that stand the test of time.
+                        </p>
+                        <a href="#contact" class="btn-service">
+                            <i class="fas fa-cogs"></i>Learn Our Process
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-image" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                </div>
+            </div>
+
+            <!-- Materials & Equipment -->
+            <div class="row content-row scroll-reveal">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="content-text">
+                        <h2 class="content-title">Quality Materials & Equipment</h2>
+                        <p class="content-description">
+                            We source only the finest construction materials and use state-of-the-art equipment to ensure the highest standards. Our partnerships with trusted suppliers guarantee competitive pricing.
+                        </p>
+                        <p class="content-description">
+                            From cement and steel to finishing materials, we provide a complete range of construction supplies along with professional equipment rental services.
+                        </p>
+                        <a href="shop.html" class="btn-service">
+                            <i class="fas fa-shopping-cart"></i>Shop Materials
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="content-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-construction" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title-large scroll-reveal">Ready to Start Your Construction Project?</h2>
+                <p class="cta-text-large scroll-reveal">
+                    Get a free consultation and detailed quote for your construction needs. Our experienced team will help you build your dream home or commercial property with quality and precision.
+                </p>
+                <div class="cta-buttons scroll-reveal">
+                    <a href="tel:+254794894910" class="btn-cta-primary">
+                        <i class="fas fa-phone"></i>
+                        Call +254 794 894 910
+                    </a>
+                    <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20construction%20services.%20Please%20provide%20more%20information%20and%20a%20free%20consultation." class="btn-cta-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <p>Professional construction services in Nyeri. Building quality homes and commercial properties with 11+ years of experience and commitment to excellence.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Construction Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services">Residential Construction</a></li>
+                        <li><a href="#services">Commercial Buildings</a></li>
+                        <li><a href="#services">Renovations</a></li>
+                        <li><a href="shop.html">Building Materials</a></li>
+                        <li><a href="shop.html">Equipment Rental</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon-Sat: 7:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Website by <a href="https://kingscreationagency.co.ke" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20construction%20services.%20Please%20provide%20more%20information." class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Fixed Click-based dropdown toggle
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+
+        // Mobile dropdown toggle function
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize Swiper Hero Slider
+        const heroSwiper = new Swiper('.hero-swiper', {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 1000,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            on: {
+                slideChange: function () {
+                    updateHeroNavigation(this.realIndex);
+                }
+            }
+        });
+
+        // Custom Hero Navigation
+        function goToSlide(index) {
+            heroSwiper.slideToLoop(index);
+            updateHeroNavigation(index);
+        }
+
+        function updateHeroNavigation(activeIndex) {
+            const dots = document.querySelectorAll('.hero-nav-dot');
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Enhanced scroll animations using Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add staggered animation delays
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                        
+                        // Special handling for staggered feature items
+                        if (entry.target.classList.contains('service-features')) {
+                            const features = entry.target.querySelectorAll('.stagger-animation');
+                            features.forEach((feature, featureIndex) => {
+                                setTimeout(() => {
+                                    feature.classList.add('revealed');
+                                }, featureIndex * 150);
+                            });
+                        }
+                        
+                    }, index * 100);
+                    
+                    // Unobserve after animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-up, .scroll-reveal-zoom, .stagger-animation, .bounce-in, .fade-slide, .service-features').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.hero-content .scroll-reveal-zoom');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('revealed');
+                    }, index * 300);
+                });
+            }, 200);
+        });
+
+        // Add click event to close dropdowns when clicking on menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateOnScroll() {
+            // Parallax and scroll effects here
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+    </script>
+</body>
+</html>

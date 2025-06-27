@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Clay Products - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Premium Kenya clay products including clay bricks, roofing tiles, and interlocking blocks. Professional delivery services across Nyeri and Central Kenya.">
+    <meta name="keywords" content="Kenya clay products, clay bricks, clay tiles, interlocking blocks, Nyeri clay suppliers">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* Top Header */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section with Slider */
+        .page-header {
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide-1 {
+            background-image: linear-gradient(135deg, rgba(76, 175, 80, 0.85) 0%, rgba(102, 187, 106, 0.75) 100%), 
+                              url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .hero-slide-2 {
+            background-image: linear-gradient(135deg, rgba(76, 175, 80, 0.85) 0%, rgba(102, 187, 106, 0.75) 100%), 
+                              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .hero-slide-3 {
+            background-image: linear-gradient(135deg, rgba(76, 175, 80, 0.85) 0%, rgba(102, 187, 106, 0.75) 100%), 
+                              url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .explore-shop-btn {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .explore-shop-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            color: var(--primary-color);
+        }
+
+        /* Clean Clay Products Section */
+        .clay-products-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 70px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+        }
+
+        .product-image-container {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .product-image {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .product-info {
+            padding: 35px 30px;
+        }
+
+        .product-category {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 18px;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .product-features li {
+            color: var(--text-light);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .product-features li i {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Interactive Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            color: var(--primary-color);
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .phone-btn {
+            background: var(--gradient-secondary);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) translateY(-3px);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Clay Products Slider -->
+    <section class="page-header">
+        <div class="hero-slider">
+            <div class="hero-slide hero-slide-1 active"></div>
+            <div class="hero-slide hero-slide-2"></div>
+            <div class="hero-slide hero-slide-3"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title animate-on-scroll">Premium Kenya Clay Products</h1>
+                <p class="page-subtitle animate-on-scroll">Locally crafted clay bricks, roofing tiles, and interlocking blocks made from high-quality Kenya clay. Building tradition with modern excellence across Nyeri and Central Kenya.</p>
+                <a href="shop.html" class="explore-shop-btn animate-on-scroll">
+                    <i class="fas fa-arrow-right"></i>
+                    Explore More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kenya Clay Products Section -->
+    <section class="clay-products-section" id="products">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-on-scroll">Our Kenya Clay Products</h2>
+                <p class="section-subtitle animate-on-scroll">Premium quality clay products manufactured from the finest Kenya clay, combining traditional craftsmanship with modern manufacturing techniques for superior durability and aesthetic appeal.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="product-card animate-on-scroll" onclick="showProductDetails('clay-bricks')">
+                        <div class="product-image-container">
+                            <div class="product-image" style="background-image: url('/images/clay\ 2.jpg')"></div>
+                            <div class="product-badge">Featured Product</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Kenya Clay</div>
+                            <h3 class="product-title">Premium Clay Bricks</h3>
+                            <p class="product-description">High-quality clay bricks manufactured from premium Kenya clay, perfect for residential and commercial construction projects. Our bestselling product trusted by builders across Central Kenya.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i>Superior strength and durability</li>
+                                <li><i class="fas fa-check"></i>Excellent thermal insulation</li>
+                                <li><i class="fas fa-check"></i>Weather resistant coating</li>
+                                <li><i class="fas fa-check"></i>Multiple sizes available</li>
+                                <li><i class="fas fa-check"></i>Eco-friendly production</li>
+                                <li><i class="fas fa-check"></i>Competitive pricing</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Premium%20Clay%20Bricks.%20Please%20provide%20pricing%20and%20availability." class="btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="shop.html" class="btn-cta" style="background: var(--gradient-primary); color: white; font-size: 1.1rem; padding: 18px 35px;">
+                    <i class="fas fa-store"></i>View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Fast Delivery</h4>
+                        <p>Quick delivery across Nyeri and Central Kenya with our professional logistics network.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Quality Guarantee</h4>
+                        <p>Premium Kenya clay products manufactured to international quality standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Eco-Friendly</h4>
+                        <p>Sustainable production using natural Kenya clay with minimal environmental impact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Expert Support</h4>
+                        <p>Professional consultation and technical support for all your construction needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="cta-title animate-on-scroll">Ready to Build with Kenya Clay?</h2>
+                <p class="animate-on-scroll">Contact us today for competitive pricing on premium Kenya clay products. Our expert team is ready to help you choose the perfect clay solution for your construction project.</p>
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="tel:+254794894910" class="btn-cta">
+                        <i class="fas fa-phone"></i>Call +254 794 894 910
+                    </a>
+                    <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20Kenya%20clay%20products.%20Please%20provide%20catalog%20and%20pricing." class="btn-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i>WhatsApp Catalog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20Kenya%20clay%20products." class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Hero Image Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 4000);
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.nav-menu');
+            
+            menuToggle.classList.toggle('active');
+            if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+                navbar.style.flexDirection = 'column';
+                navbar.style.position = 'absolute';
+                navbar.style.top = '100%';
+                navbar.style.left = '0';
+                navbar.style.right = '0';
+                navbar.style.background = 'white';
+                navbar.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                navbar.style.padding = '20px';
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Interactive product details
+        function showProductDetails(productType) {
+            const details = {
+                'clay-bricks': {
+                    title: 'Premium Clay Bricks',
+                    message: 'Our clay bricks are perfect for residential and commercial construction. Available in various sizes and colors. Would you like a detailed quote?'
+                },
+                'clay-tiles': {
+                    title: 'Clay Roofing Tiles',
+                    message: 'Premium clay roofing tiles for beautiful and durable roofing solutions. Multiple styles available. Would you like to see our catalog?'
+                },
+                'interlocking-blocks': {
+                    title: 'Interlocking Clay Blocks',
+                    message: 'Modern interlocking clay blocks for efficient construction. Faster installation and superior performance. Would you like technical specifications?'
+                }
+            };
+
+            const product = details[productType];
+            if (product) {
+                const whatsappMessage = `Hi! I'm interested in ${product.title}. ${product.message}`;
+                const whatsappUrl = `https://wa.me/254794894910?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+
+        // Enhanced product card interactions
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const heroElements = document.querySelectorAll('.page-header-content .animate-on-scroll');
+                heroElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 200);
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>

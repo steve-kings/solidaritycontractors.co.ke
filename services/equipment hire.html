@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Hire - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Professional construction equipment hire in Nyeri, Kenya. Quality tools, machinery, and equipment rental with competitive rates and expert support.">
+    <meta name="keywords" content="equipment hire Nyeri, construction tools rental, machinery hire Kenya, power tools rental, construction equipment">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --equipment-primary: #1E40AF;
+            --equipment-secondary: #F59E0B;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-equipment: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            --gradient-equipment-alt: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Top Header - Same as home page */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation - Same as home page */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Navigation item with dropdown structure */
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        /* Click-based dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Creative Hero Section */
+        .hero-section {
+            background: 
+                linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .hero-floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .floating-tool {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-tool:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-tool:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-tool:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            background: white;
+            color: var(--equipment-primary);
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: var(--equipment-primary);
+        }
+
+        .btn-hero.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-hero.secondary:hover {
+            background: white;
+            color: var(--equipment-primary);
+        }
+
+        /* Equipment Categories Section */
+        .equipment-categories {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .equipment-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .equipment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .equipment-card:hover::before {
+            left: 100%;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-large);
+            border-color: var(--equipment-primary);
+        }
+
+        .equipment-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: var(--gradient-equipment);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .equipment-card:nth-child(2) .equipment-icon {
+            background: var(--gradient-equipment-alt);
+        }
+
+        .equipment-card:nth-child(3) .equipment-icon {
+            background: var(--gradient-secondary);
+        }
+
+        .equipment-card:nth-child(4) .equipment-icon {
+            background: var(--gradient-primary);
+        }
+
+        .equipment-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .equipment-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .equipment-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .equipment-features li {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .equipment-features li i {
+            color: var(--equipment-primary);
+            width: 16px;
+        }
+
+        .btn-equipment {
+            background: var(--gradient-equipment);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-equipment:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        .equipment-card:nth-child(2) .btn-equipment {
+            background: var(--gradient-equipment-alt);
+        }
+
+        .equipment-card:nth-child(3) .btn-equipment {
+            background: var(--gradient-secondary);
+        }
+
+        .equipment-card:nth-child(4) .btn-equipment {
+            background: var(--gradient-primary);
+        }
+
+        /* Featured Equipment Section */
+        .featured-equipment {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .featured-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.4s ease;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .featured-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-equipment);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .featured-content {
+            padding: 30px;
+        }
+
+        .featured-category {
+            color: var(--equipment-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .featured-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .featured-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .featured-specs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .spec-item {
+            background: var(--light-color);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .featured-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-rent {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-rent:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Rental Process Section */
+        .rental-process {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-equipment);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+            position: relative;
+        }
+
+        .process-step:not(:last-child) .step-number::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 50px;
+            height: 2px;
+            background: var(--border-color);
+            transform: translateY(-50%);
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .step-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--gradient-equipment);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--equipment-primary);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: var(--equipment-primary);
+        }
+
+        .btn-cta.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-cta.whatsapp:hover {
+            background: #128C7E;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer p, .footer li {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-2px);
+            color: white;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-left.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-right.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process-step:not(:last-child) .step-number::after {
+                display: none;
+            }
+
+            .featured-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header - Same as home page -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation - Same as home page -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="buildingmaterial.html">Building Materials</a></li>
+                            <li><a href="construction.html">Construction</a></li>
+                            <li><a href="equipment hire.html" style="color: var(--equipment-primary); font-weight: 600;">Equipment Hire</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="landscaping.html">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar - Same as home page -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="buildingmaterial.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Creative Hero Section -->
+    <section class="hero-section">
+        <div class="hero-floating-elements">
+            <div class="floating-tool"><i class="fas fa-hammer"></i></div>
+            <div class="floating-tool"><i class="fas fa-wrench"></i></div>
+            <div class="floating-tool"><i class="fas fa-cog"></i></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <i class="fas fa-tools me-2"></i>Professional Equipment Hire
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    Rent Quality<br>
+                    <span style="color: #FBBF24;">Construction Equipment</span>
+                </h1>
+                <p class="hero-subtitle animate-on-scroll">
+                    Professional-grade tools and machinery for your construction projects. Flexible rental terms, competitive rates, and expert support to keep your work on track.
+                </p>
+                <div class="hero-cta animate-on-scroll">
+                    <a href="#equipment" class="btn-hero">
+                        <i class="fas fa-search me-2"></i>Browse Equipment
+                    </a>
+                    <a href="#rental-process" class="btn-hero secondary">
+                        <i class="fas fa-info-circle me-2"></i>How It Works
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Categories -->
+    <section class="equipment-categories" id="equipment">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-on-scroll">Equipment Categories</h2>
+                <p class="section-subtitle animate-on-scroll">Professional construction equipment rental across all categories with flexible terms and expert support</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-card animate-on-scroll">
+                    <div class="equipment-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Power Tools</h3>
+                    <p>Professional-grade power tools for precision work and efficient project completion.</p>
+                    <ul class="equipment-features">
+                        <li><i class="fas fa-check"></i>Electric Drills & Drivers</li>
+                        <li><i class="fas fa-check"></i>Angle Grinders & Sanders</li>
+                        <li><i class="fas fa-check"></i>Circular & Reciprocating Saws</li>
+                        <li><i class="fas fa-check"></i>Impact Wrenches</li>
+                        <li><i class="fas fa-check"></i>Safety Equipment Included</li>
+                    </ul>
+                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Power%20Tools%20rental.%20Please%20provide%20availability%20and%20rates." class="btn-equipment" target="_blank">
+                        <i class="fas fa-tools"></i>Rent Tools
+                    </a>
+                </div>
+                
+                <div class="equipment-card animate-on-scroll">
+                    <div class="equipment-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>Heavy Machinery</h3>
+                    <p>Heavy-duty construction machinery for large-scale projects and earth-moving operations.</p>
+                    <ul class="equipment-features">
+                        <li><i class="fas fa-check"></i>Excavators & Backhoes</li>
+                        <li><i class="fas fa-check"></i>Wheel Loaders</li>
+                        <li><i class="fas fa-check"></i>Concrete Mixers</li>
+                        <li><i class="fas fa-check"></i>Compactors & Rollers</li>
+                        <li><i class="fas fa-check"></i>Operator Available</li>
+                    </ul>
+                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Heavy%20Machinery%20rental.%20Please%20provide%20availability%20and%20rates." class="btn-equipment" target="_blank">
+                        <i class="fas fa-cogs"></i>Hire Machinery
+                    </a>
+                </div>
+                
+                <div class="equipment-card animate-on-scroll">
+                    <div class="equipment-icon">
+                        <i class="fas fa-ladder"></i>
+                    </div>
+                    <h3>Site Equipment</h3>
+                    <p>Essential site equipment for safe and efficient construction operations.</p>
+                    <ul class="equipment-features">
+                        <li><i class="fas fa-check"></i>Scaffolding Systems</li>
+                        <li><i class="fas fa-check"></i>Extension Ladders</li>
+                        <li><i class="fas fa-check"></i>Site Lighting</li>
+                        <li><i class="fas fa-check"></i>Generators & Compressors</li>
+                        <li><i class="fas fa-check"></i>Safety Barriers</li>
+                    </ul>
+                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Site%20Equipment%20rental.%20Please%20provide%20availability%20and%20rates." class="btn-equipment" target="_blank">
+                        <i class="fas fa-hard-hat"></i>Get Equipment
+                    </a>
+                </div>
+                
+                <div class="equipment-card animate-on-scroll">
+                    <div class="equipment-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Specialized Tools</h3>
+                    <p>Specialized construction tools for specific applications and professional finishing work.</p>
+                    <ul class="equipment-features">
+                        <li><i class="fas fa-check"></i>Tile Cutters & Wet Saws</li>
+                        <li><i class="fas fa-check"></i>Welding Equipment</li>
+                        <li><i class="fas fa-check"></i>Concrete Tools</li>
+                        <li><i class="fas fa-check"></i>Measuring Equipment</li>
+                        <li><i class="fas fa-check"></i>Finishing Tools</li>
+                    </ul>
+                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Specialized%20Tools%20rental.%20Please%20provide%20availability%20and%20rates." class="btn-equipment" target="_blank">
+                        <i class="fas fa-wrench"></i>Rent Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Equipment -->
+    <section class="featured-equipment">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-on-scroll">Featured Equipment</h2>
+                <p class="section-subtitle animate-on-scroll">Popular rental equipment with detailed specifications and competitive rates</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-item animate-on-scroll">
+                    <div class="featured-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="featured-badge">Popular</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-category">Power Tools</div>
+                        <h3 class="featured-title">Professional Drill Set</h3>
+                        <p class="featured-description">High-performance electric drill with complete bit set, perfect for masonry, wood, and metal drilling applications.</p>
+                        <div class="featured-specs">
+                            <div class="spec-item">850W Motor</div>
+                            <div class="spec-item">Variable Speed</div>
+                            <div class="spec-item">Hammer Function</div>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20renting%20the%20Professional%20Drill%20Set.%20Please%20provide%20rates%20and%20availability." class="btn-rent" target="_blank">
+                                <i class="fab fa-whatsapp"></i>Rent Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-item animate-on-scroll">
+                    <div class="featured-image" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="featured-badge">Heavy Duty</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-category">Heavy Machinery</div>
+                        <h3 class="featured-title">Mini Excavator</h3>
+                        <p class="featured-description">Compact excavator ideal for small to medium construction projects, landscaping, and utility work with excellent maneuverability.</p>
+                        <div class="featured-specs">
+                            <div class="spec-item">3.5 Ton</div>
+                            <div class="spec-item">Zero Swing</div>
+                            <div class="spec-item">Operator Included</div>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20renting%20the%20Mini%20Excavator.%20Please%20provide%20rates%20and%20availability." class="btn-rent" target="_blank">
+                                <i class="fab fa-whatsapp"></i>Rent Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-item animate-on-scroll">
+                    <div class="featured-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="featured-badge">Complete Set</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-category">Site Equipment</div>
+                        <h3 class="featured-title">Scaffolding System</h3>
+                        <p class="featured-description">Complete scaffolding system with platforms, guardrails, and all necessary components for safe working at height.</p>
+                        <div class="featured-specs">
+                            <div class="spec-item">Modular System</div>
+                            <div class="spec-item">Safety Certified</div>
+                            <div class="spec-item">Easy Assembly</div>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20renting%20the%20Scaffolding%20System.%20Please%20provide%20rates%20and%20availability." class="btn-rent" target="_blank">
+                                <i class="fab fa-whatsapp"></i>Rent Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Process -->
+    <section class="rental-process" id="rental-process">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-on-scroll">How Equipment Hire Works</h2>
+                <p class="section-subtitle animate-on-scroll">Simple and transparent rental process designed for your convenience</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Choose Equipment</h3>
+                    <p class="step-description">Browse our extensive catalog and select the equipment you need for your project. Get detailed specifications and pricing information.</p>
+                </div>
+                
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Request Quote</h3>
+                    <p class="step-description">Contact us via WhatsApp or phone to get a customized quote based on your rental duration and specific requirements.</p>
+                </div>
+                
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Delivery & Setup</h3>
+                    <p class="step-description">We deliver the equipment to your site and provide basic training or operator services if required for safe operation.</p>
+                </div>
+                
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Use & Support</h3>
+                    <p class="step-description">Use the equipment for your project with our ongoing technical support and maintenance services throughout the rental period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title animate-on-scroll">Ready to Rent Equipment?</h2>
+                <p class="cta-subtitle animate-on-scroll">Get competitive rates on professional construction equipment with flexible rental terms and expert support. Contact us today for a customized quote.</p>
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="tel:+254794894910" class="btn-cta">
+                        <i class="fas fa-phone"></i>Call +254 794 894 910
+                    </a>
+                    <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20equipment%20hire%20services.%20Please%20provide%20available%20equipment%20and%20rental%20rates." class="btn-cta whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>WhatsApp Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <p>Professional construction equipment hire with competitive rates, flexible terms, and expert support across Central Kenya.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Equipment Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#equipment">Power Tools</a></li>
+                        <li><a href="#equipment">Heavy Machinery</a></li>
+                        <li><a href="#equipment">Site Equipment</a></li>
+                        <li><a href="#equipment">Specialized Tools</a></li>
+                        <li><a href="buildingmaterial.html">Building Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon-Sat: 7:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Developer <a href="#" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20equipment%20hire%20services.%20Please%20provide%20more%20information." class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Click-based dropdown toggle - Same as home page
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Mobile Menu Functions - Same as home page
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // Mobile dropdown toggle function
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100); // Stagger animation
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll, .animate-left, .animate-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.hero-content .animate-on-scroll');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 200);
+                });
+            }, 100);
+        });
+
+        // Add click event to close dropdowns when clicking on menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        // Enhanced floating tools animation
+        document.querySelectorAll('.floating-tool').forEach((tool, index) => {
+            tool.style.animationDelay = `${index * 2}s`;
+            
+            // Add random movement
+            setInterval(() => {
+                const randomX = Math.random() * 20 - 10;
+                const randomY = Math.random() * 20 - 10;
+                tool.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 10}deg)`;
+            }, 3000 + index * 1000);
+        });
+
+        // Scroll-triggered counter animation for process steps
+        const processSteps = document.querySelectorAll('.step-number');
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'pulse 0.6s ease';
+                }
+            });
+        });
+
+        processSteps.forEach(step => {
+            processObserver.observe(step);
+        });
+
+        // Equipment card hover effects
+        document.querySelectorAll('.equipment-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.equipment-icon').style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.equipment-icon').style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+</body>
+</html>

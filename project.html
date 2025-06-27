@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Explore our diverse portfolio of construction, landscaping, and event services. Quality projects delivered with excellence and professional craftsmanship.">
+    <meta name="keywords" content="construction projects Nyeri, landscaping portfolio Kenya, event services, building contractors, project gallery">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Top Header - Same as home page */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation - Same as home page */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Navigation item with dropdown structure */
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        /* Click-based dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Creative Page Header */
+        .page-header {
+            background: 
+                linear-gradient(135deg, rgba(76, 175, 80, 0.9) 0%, rgba(102, 187, 106, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .hero-btn.primary {
+            background: white;
+            color: var(--primary-color);
+            border-color: white;
+        }
+
+        .hero-btn.secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .hero-btn.primary:hover {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .hero-btn.secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Stats in hero */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            min-width: 120px;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Service Sections */
+        .services-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Service Category */
+        .service-category {
+            margin-bottom: 100px;
+            background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 50%, #F3F4F6 100%);
+            border-radius: 20px;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-category:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .category-description {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Project Slider */
+        .project-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .project-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .project-slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 50%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .project-content {
+            width: 50%;
+            padding: 40px;
+        }
+
+        .project-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .project-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .project-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .project-features li i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .project-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .project-btn.primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .project-btn.secondary {
+            background: var(--gradient-secondary);
+            color: white;
+        }
+
+        .project-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        /* Slider Navigation */
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .slider-arrows:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-prev {
+            left: 20px;
+        }
+
+        .slider-next {
+            right: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer p, .footer li {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-2px);
+            color: white;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-left.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-right.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .hero-stat {
+                padding: 15px;
+                min-width: 100px;
+            }
+
+            .hero-stat-number {
+                font-size: 1.5rem;
+            }
+
+            .project-slide {
+                flex-direction: column;
+            }
+
+            .project-image,
+            .project-content {
+                width: 100%;
+            }
+
+            .project-image {
+                height: 250px;
+            }
+
+            .project-content {
+                padding: 30px 25px;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-title {
+                font-size: 1.6rem;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .project-cta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header - Same as home page -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation - Same as home page -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="buildingmaterial.html">Building Materials</a></li>
+                            <li><a href="construction.html">Construction</a></li>
+                            <li><a href="equipment hire.html">Equipment Hire</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="landscaping.html">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" style="color: var(--primary-color); font-weight: 600;">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar - Same as home page -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="buildingmaterial.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Creative Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title animate-on-scroll">Our Project Portfolio</h1>
+                <p class="page-subtitle animate-on-scroll">Showcasing excellence across construction, landscaping, and event services with quality craftsmanship and innovative solutions that exceed expectations.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20your%20services%20after%20viewing%20your%20project%20portfolio.%20Can%20you%20provide%20more%20information%3F" class="hero-btn primary" target="_blank">
+                        <i class="fas fa-phone"></i> Start Your Project
+                    </a>
+                    <a href="#projects" class="hero-btn secondary">
+                        <i class="fas fa-images"></i> View All Projects
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="500">0</span>
+                        <div class="hero-stat-label">Projects Completed</div>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="150">0</span>
+                        <div class="hero-stat-label">Happy Clients</div>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="10">0</span>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">4.9★</span>
+                        <div class="hero-stat-label">Client Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Portfolio Section -->
+    <section id="projects" class="services-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Our Service Excellence</h2>
+                <p class="section-subtitle">Explore our diverse portfolio showcasing quality workmanship across all our service categories</p>
+            </div>
+
+            <!-- Construction Projects -->
+            <div class="service-category animate-on-scroll">
+                <div class="container">
+                    <div class="category-header">
+                        <h3 class="category-title">
+                            <i class="fas fa-building"></i>
+                            Construction Projects
+                        </h3>
+                        <p class="category-description">
+                            We deliver quality construction services using modern techniques and premium materials. From residential homes to commercial buildings, our experienced team ensures exceptional results.
+                        </p>
+                    </div>
+                    
+                    <div class="project-slider" id="construction-slider">
+                        <div class="project-slides">
+                            <!-- Slide 1 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Residential Construction</h4>
+                                    <p class="project-description">
+                                        Our residential construction services focus on creating comfortable, durable homes that meet modern living standards. We handle everything from foundation to finishing with attention to detail.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Quality foundation and structural work</li>
+                                        <li><i class="fas fa-check"></i> Modern architectural designs</li>
+                                        <li><i class="fas fa-check"></i> Premium finishing materials</li>
+                                        <li><i class="fas fa-check"></i> Energy-efficient solutions</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20your%20residential%20construction%20services.%20Can%20you%20provide%20a%20quote%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Get Quote
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Commercial Construction</h4>
+                                    <p class="project-description">
+                                        We specialize in commercial building construction including offices, retail spaces, and warehouses. Our team ensures projects are completed on time and within budget.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Large-scale project management</li>
+                                        <li><i class="fas fa-check"></i> Commercial-grade materials</li>
+                                        <li><i class="fas fa-check"></i> Safety compliance standards</li>
+                                        <li><i class="fas fa-check"></i> Flexible design solutions</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20your%20commercial%20construction%20services.%20Can%20we%20discuss%20my%20project%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Discuss Project
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="slider-arrows slider-prev" onclick="prevSlide('construction')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-arrows slider-next" onclick="nextSlide('construction')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-nav">
+                            <div class="slider-dot active" onclick="goToSlide('construction', 0)"></div>
+                            <div class="slider-dot" onclick="goToSlide('construction', 1)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscaping Projects -->
+            <div class="service-category animate-on-scroll">
+                <div class="container">
+                    <div class="category-header">
+                        <h3 class="category-title">
+                            <i class="fas fa-leaf"></i>
+                            Landscaping Projects
+                        </h3>
+                        <p class="category-description">
+                            Transform your outdoor spaces with our expert landscaping services. We create beautiful, sustainable gardens using plants from our own nursery.
+                        </p>
+                    </div>
+                    
+                    <div class="project-slider" id="landscaping-slider">
+                        <div class="project-slides">
+                            <!-- Slide 1 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Garden Design & Installation</h4>
+                                    <p class="project-description">
+                                        Our garden design services create stunning outdoor spaces that blend beauty with functionality. We use indigenous and exotic plants that thrive in local conditions.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Custom garden design plans</li>
+                                        <li><i class="fas fa-check"></i> Plant selection and installation</li>
+                                        <li><i class="fas fa-check"></i> Irrigation system setup</li>
+                                        <li><i class="fas fa-check"></i> Ongoing maintenance services</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20your%20garden%20design%20and%20landscaping%20services.%20Can%20you%20help%20with%20my%20project%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Design My Garden
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Plant Nursery Services</h4>
+                                    <p class="project-description">
+                                        Our nursery provides high-quality plants, trees, and landscaping materials. Located on Nyeri-Karatina Road, we offer a wide variety of indigenous and exotic species.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Wide variety of plants and trees</li>
+                                        <li><i class="fas fa-check"></i> Healthy, disease-free specimens</li>
+                                        <li><i class="fas fa-check"></i> Expert plant care advice</li>
+                                        <li><i class="fas fa-check"></i> Delivery and installation services</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20visiting%20your%20plant%20nursery%20and%20purchasing%20plants.%20What%20varieties%20do%20you%20have%20available%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Visit Nursery
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="slider-arrows slider-prev" onclick="prevSlide('landscaping')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-arrows slider-next" onclick="nextSlide('landscaping')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-nav">
+                            <div class="slider-dot active" onclick="goToSlide('landscaping', 0)"></div>
+                            <div class="slider-dot" onclick="goToSlide('landscaping', 1)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Services Projects -->
+            <div class="service-category animate-on-scroll">
+                <div class="container">
+                    <div class="category-header">
+                        <h3 class="category-title">
+                            <i class="fas fa-calendar-star"></i>
+                            Event Services
+                        </h3>
+                        <p class="category-description">
+                            Make your special occasions memorable with our comprehensive event services. From intimate gatherings to large celebrations, we handle all the details.
+                        </p>
+                    </div>
+                    
+                    <div class="project-slider" id="events-slider">
+                        <div class="project-slides">
+                            <!-- Slide 1 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1530841344095-5f07ba5f9e5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Wedding Services</h4>
+                                    <p class="project-description">
+                                        Create your dream wedding with our comprehensive wedding services. We provide tents, decoration, furniture, and complete event coordination for your special day.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Elegant tent and venue setup</li>
+                                        <li><i class="fas fa-check"></i> Beautiful floral decorations</li>
+                                        <li><i class="fas fa-check"></i> Quality furniture and linens</li>
+                                        <li><i class="fas fa-check"></i> Professional event coordination</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20planning%20my%20wedding%20and%20interested%20in%20your%20wedding%20services.%20Can%20you%20provide%20packages%20and%20pricing%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Plan Wedding
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="project-slide">
+                                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Corporate Events</h4>
+                                    <p class="project-description">
+                                        Professional corporate event services for conferences, meetings, and company celebrations. We ensure your business events are executed flawlessly.
+                                    </p>
+                                    <ul class="project-features">
+                                        <li><i class="fas fa-check"></i> Professional venue setup</li>
+                                        <li><i class="fas fa-check"></i> Audio-visual equipment</li>
+                                        <li><i class="fas fa-check"></i> Corporate-grade furniture</li>
+                                        <li><i class="fas fa-check"></i> Event management services</li>
+                                    </ul>
+                                    <div class="project-cta">
+                                        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20organizing%20a%20corporate%20event%20and%20need%20your%20professional%20services.%20Can%20we%20discuss%20the%20details%3F" class="project-btn primary" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Book Event
+                                        </a>
+                                        <a href="tel:+254794894910" class="project-btn secondary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="slider-arrows slider-prev" onclick="prevSlide('events')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-arrows slider-next" onclick="nextSlide('events')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-nav">
+                            <div class="slider-dot active" onclick="goToSlide('events', 0)"></div>
+                            <div class="slider-dot" onclick="goToSlide('events', 1)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html" style="color: var(--primary-color); font-weight: 600;">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="construction.html">Construction</a></li>
+                        <li><a href="landscaping.html">Landscaping</a></li>
+                        <li><a href="events.html">Event Services</a></li>
+                        <li><a href="shop.html">Plant Nursery</a></li>
+                        <li><a href="buildingmaterial.html">Building Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Developer <a href="#" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20interested%20in%20your%20services%20after%20viewing%20your%20project%20portfolio.%20Can%20you%20provide%20more%20information%3F" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Click-based dropdown toggle - Same as home page
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Mobile Menu Functions - Same as home page
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // Mobile dropdown toggle function
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Slider functionality
+        let currentSlides = {
+            construction: 0,
+            landscaping: 0,
+            events: 0
+        };
+
+        function nextSlide(category) {
+            const slider = document.querySelector(`#${category}-slider .project-slides`);
+            const slides = slider.children;
+            const dots = document.querySelectorAll(`#${category}-slider .slider-dot`);
+            
+            currentSlides[category] = (currentSlides[category] + 1) % slides.length;
+            
+            slider.style.transform = `translateX(-${currentSlides[category] * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlides[category]);
+            });
+        }
+
+        function prevSlide(category) {
+            const slider = document.querySelector(`#${category}-slider .project-slides`);
+            const slides = slider.children;
+            const dots = document.querySelectorAll(`#${category}-slider .slider-dot`);
+            
+            currentSlides[category] = (currentSlides[category] - 1 + slides.length) % slides.length;
+            
+            slider.style.transform = `translateX(-${currentSlides[category] * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlides[category]);
+            });
+        }
+
+        function goToSlide(category, slideIndex) {
+            const slider = document.querySelector(`#${category}-slider .project-slides`);
+            const dots = document.querySelectorAll(`#${category}-slider .slider-dot`);
+            
+            currentSlides[category] = slideIndex;
+            
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === slideIndex);
+            });
+        }
+
+        // Auto-advance slides every 5 seconds
+        Object.keys(currentSlides).forEach(category => {
+            setInterval(() => {
+                nextSlide(category);
+            }, 5000);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100); // Stagger animation
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll, .animate-left, .animate-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.hero-stat-number[data-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.hero-stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.page-header-content .animate-on-scroll');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 200);
+                });
+            }, 100);
+        });
+
+        // Add click event to close dropdowns when clicking on menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

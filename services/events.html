@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Services - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Professional event services in Nyeri. Tent rentals, furniture hire, mobile toilets, and complete event solutions for weddings, parties, and corporate events.">
+    <meta name="keywords" content="event services Nyeri, tent rentals Kenya, wedding tents, corporate events, party equipment hire">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --event-primary: #7C3AED;
+            --event-secondary: #EC4899;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-event: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+            --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Top Header - Made smaller */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation with click-based dropdown */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Navigation item with dropdown structure */
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .main-nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link.active::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        /* Click-based dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: 
+                linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(236, 72, 153, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 90%;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .breadcrumb-nav {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        /* Enhanced scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(80px) scale(0.9);
+            transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-100px) rotate(-10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(100px) rotate(10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-up {
+            opacity: 0;
+            transform: translateY(100px) scale(0.8);
+            transition: all 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-up.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-zoom {
+            opacity: 0;
+            transform: scale(0.3) rotate(45deg);
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .scroll-reveal-zoom.revealed {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .stagger-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .stagger-animation.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .bounce-in.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .fade-slide {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .fade-slide.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Event Services Section */
+        .event-services {
+            padding: 80px 0;
+            background: white;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .event-service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .event-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .event-service-card:hover::before {
+            left: 100%;
+        }
+
+        .event-service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-large);
+            border-color: var(--event-primary);
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: var(--gradient-event);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .event-service-card:nth-child(2) .service-icon-large {
+            background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+        }
+
+        .event-service-card:nth-child(3) .service-icon-large {
+            background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+        }
+
+        .event-service-card:nth-child(4) .service-icon-large {
+            background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+        }
+
+        .event-service-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.5rem;
+            word-wrap: break-word;
+        }
+
+        .event-service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            word-wrap: break-word;
+        }
+
+        .service-features-large {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .service-features-large li {
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features-large li i {
+            color: var(--event-primary);
+            font-size: 1rem;
+            width: 20px;
+        }
+
+        .btn-event {
+            background: var(--gradient-event);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-event:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: white;
+        }
+
+        /* Interactive Image Section */
+        .interactive-image-section {
+            padding: 80px 0;
+            background: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 20px;
+            box-shadow: var(--shadow-large);
+            transition: all 0.6s ease;
+            opacity: 0.8;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) rotate(2deg);
+            opacity: 1;
+            z-index: 10;
+        }
+
+        .floating-image.img-1 {
+            top: 10%;
+            left: 5%;
+            width: 200px;
+            height: 150px;
+            background: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-image.img-2 {
+            top: 30%;
+            right: 10%;
+            width: 180px;
+            height: 180px;
+            background: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 6s ease-in-out infinite 2s;
+        }
+
+        .floating-image.img-3 {
+            bottom: 20%;
+            left: 8%;
+            width: 160px;
+            height: 120px;
+            background: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 6s ease-in-out infinite 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+
+        .interactive-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        /* Product Catalogue Section */
+        .product-catalogue {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .catalogue-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .catalogue-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--event-primary), var(--event-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .catalogue-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        /* Swiper Styles */
+        .product-swiper {
+            width: 100%;
+            padding: 20px 0 80px 0;
+        }
+
+        .product-slide {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .product-slide:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gradient-event);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-info {
+            padding: 30px 25px;
+        }
+
+        .product-category {
+            color: var(--event-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--event-primary);
+            margin-bottom: 20px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp-order {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-whatsapp-order:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-view-details {
+            background: var(--gradient-event);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-view-details:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--event-primary);
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-medium);
+            margin-top: -25px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--event-primary);
+            opacity: 0.3;
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /* Explore More Section */
+        .explore-more-section {
+            padding: 80px 0;
+            background: var(--gradient-event);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-more-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .explore-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .explore-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .explore-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .btn-explore-shop {
+            background: white;
+            color: var(--event-primary);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 35px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-large);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-explore-shop:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 30px 40px -10px rgba(0,0,0,0.3);
+            color: var(--event-primary);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.4s ease;
+            position: relative;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-large);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(124, 58, 237, 0.8) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info h4 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .gallery-info p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-event {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-event::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+
+        .cta-text-large {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: var(--primary-color);
+        }
+
+        .btn-cta-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-cta-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer p, .footer li {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) translateY(-3px);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .page-header {
+                padding: 60px 0 40px;
+                min-height: 50vh;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .catalogue-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .floating-image {
+                display: none;
+            }
+
+            .interactive-content {
+                max-width: 95%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-title-large {
+                font-size: 2.2rem;
+            }
+
+            .explore-title {
+                font-size: 2rem;
+            }
+
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .catalogue-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .service-icon-large {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .mobile-sidebar {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header - Made smaller -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation with Click-based Dropdown -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="buildingmaterial.html">Building Materials</a></li>
+                            <li><a href="construction.html">Construction</a></li>
+                            <li><a href="equipment hire.html">Equipment Hire</a></li>
+                            <li><a href="events.html" class="active">Events</a></li>
+                            <li><a href="landscaping.html">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about us.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="buildingmaterial.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title scroll-reveal-zoom">Professional Event Services</h1>
+                <p class="page-subtitle scroll-reveal-up">Complete event solutions for weddings, corporate events, parties, and celebrations. From tent rentals to setup services, we make your special occasions memorable and stress-free.</p>
+                <nav class="breadcrumb-nav fade-slide">
+                    <a href="index.html">Home</a> / <a href="services.html">Services</a> / <span>Event Services</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Services Section -->
+    <section class="event-services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title scroll-reveal">Complete Event Solutions</h2>
+                <p class="section-subtitle scroll-reveal">From intimate gatherings to grand celebrations, we provide comprehensive event services that ensure your occasion is perfect and memorable</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="event-service-card scroll-reveal-left">
+                        <div class="service-icon-large bounce-in">
+                            <i class="fas fa-campground"></i>
+                        </div>
+                        <h3>Tent Rentals</h3>
+                        <p>Professional tent rentals for all occasions. Various sizes from intimate family gatherings to large corporate events and weddings.</p>
+                        <ul class="service-features-large">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Wedding Tents (All Sizes)</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Corporate Event Tents</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Party & Birthday Tents</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Weather Protection</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Professional Setup</li>
+                        </ul>
+                        <a href="#catalogue" class="btn-event">
+                            <i class="fas fa-campground"></i>
+                            View Tents
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="event-service-card scroll-reveal-right">
+                        <div class="service-icon-large bounce-in">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h3>Furniture & Equipment Hire</h3>
+                        <p>Complete furniture rental including chairs, tables, linens, and accessories to create the perfect atmosphere for your event.</p>
+                        <ul class="service-features-large">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Chiavari & Plastic Chairs</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Round & Rectangular Tables</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Table Linens & Decorations</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Sound Systems</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Lighting Equipment</li>
+                        </ul>
+                        <a href="#catalogue" class="btn-event">
+                            <i class="fas fa-couch"></i>
+                            Browse Furniture
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="event-service-card scroll-reveal-left">
+                        <div class="service-icon-large bounce-in">
+                            <i class="fas fa-restroom"></i>
+                        </div>
+                        <h3>Mobile Toilets & Facilities</h3>
+                        <p>Clean, well-maintained mobile toilet facilities for outdoor events. Various options from basic to VIP facilities for guest comfort.</p>
+                        <ul class="service-features-large">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Standard Mobile Toilets</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>VIP Toilet Facilities</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Handwashing Stations</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Regular Maintenance</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Event Duration Service</li>
+                        </ul>
+                        <a href="#contact" class="btn-event">
+                            <i class="fas fa-calendar"></i>
+                            Book Facilities
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="event-service-card scroll-reveal-right">
+                        <div class="service-icon-large bounce-in">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Event Setup & Management</h3>
+                        <p>Complete event planning and setup services. Our experienced team handles everything from setup to teardown, ensuring a smooth event experience.</p>
+                        <ul class="service-features-large">
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Event Planning & Consultation</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Professional Setup Team</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Decorations & Styling</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Event Day Coordination</li>
+                            <li class="stagger-animation"><i class="fas fa-check"></i>Post-Event Cleanup</li>
+                        </ul>
+                        <a href="#contact" class="btn-event">
+                            <i class="fas fa-calendar-check"></i>
+                            Plan Event
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Image Section -->
+    <section class="interactive-image-section">
+        <div class="floating-image img-1"></div>
+        <div class="floating-image img-2"></div>
+        <div class="floating-image img-3"></div>
+        
+        <div class="container">
+            <div class="interactive-content">
+                <h2 class="section-title scroll-reveal">Making Events Memorable Since 2013</h2>
+                <p class="section-subtitle scroll-reveal">
+                    With over 11 years of experience in event services, we've helped create thousands of unforgettable moments across Nyeri and Central Kenya. From intimate family celebrations to grand corporate events and dream weddings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalogue Section -->
+    <section class="product-catalogue" id="catalogue">
+        <div class="container">
+            <div class="catalogue-header">
+                <h2 class="scroll-reveal">Event Equipment Catalogue</h2>
+                <p class="scroll-reveal">Browse our comprehensive collection of event equipment and furniture. Book directly through WhatsApp for seamless event planning.</p>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="swiper product-swiper scroll-reveal">
+                <div class="swiper-wrapper">
+                    <!-- Product 1 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Popular</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Wedding Tents</div>
+                                <h3 class="product-title">Premium Wedding Marquees</h3>
+                                <p class="product-description">Elegant wedding tents for 50-500 guests. Complete with side walls, lighting fixtures, and professional setup service.</p>
+                                <div class="product-price">KSH 15,000 - 80,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Premium%20Wedding%20Marquees.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Book Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">New</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Furniture Hire</div>
+                                <h3 class="product-title">Chiavari Chairs & Tables</h3>
+                                <p class="product-description">Elegant chiavari chairs and round tables perfect for weddings and formal events. Available in multiple colors.</p>
+                                <div class="product-price">KSH 200 - 1,500/piece</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Chiavari%20Chairs%20%26%20Tables.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Best Seller</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Party Equipment</div>
+                                <h3 class="product-title">Party Tent Packages</h3>
+                                <p class="product-description">Complete party packages including tent, chairs, tables, and decorations. Perfect for birthdays and celebrations.</p>
+                                <div class="product-price">KSH 8,000 - 25,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Party%20Tent%20Packages.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Book Package
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Premium</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Corporate Events</div>
+                                <h3 class="product-title">Corporate Pavilions</h3>
+                                <p class="product-description">Professional corporate event setups with branded tents, conference furniture, and AV equipment for business functions.</p>
+                                <div class="product-price">KSH 20,000 - 100,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Corporate%20Pavilions.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Book Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Essential</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Sanitation</div>
+                                <h3 class="product-title">Mobile Toilet Units</h3>
+                                <p class="product-description">Clean, well-maintained mobile toilets for events. Standard and VIP options available with regular servicing.</p>
+                                <div class="product-price">KSH 3,000 - 8,000/unit</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Mobile%20Toilet%20Units.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Book Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Complete</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Event Accessories</div>
+                                <h3 class="product-title">Lighting & Sound Systems</h3>
+                                <p class="product-description">Professional lighting and sound equipment for events. LED lights, speakers, microphones, and DJ equipment rental.</p>
+                                <div class="product-price">KSH 5,000 - 20,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Lighting%20%26%20Sound%20Systems.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Book Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Section -->
+    <section class="explore-more-section">
+        <div class="container">
+            <div class="explore-content">
+                <h2 class="explore-title scroll-reveal">Explore Our Complete Event Collection</h2>
+                <p class="explore-subtitle scroll-reveal">
+                    Visit our online shop to browse our full range of event equipment, decorations, and services. Everything you need to create the perfect celebration.
+                </p>
+                <a href="shop.html" class="btn-explore-shop scroll-reveal">
+                    <i class="fas fa-store"></i>
+                    View All Equipment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title scroll-reveal">Our Event Gallery</h2>
+                <p class="section-subtitle scroll-reveal">See the beautiful events we've helped create across Nyeri and Central Kenya</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Dream Wedding Reception</h4>
+                            <p>Elegant outdoor wedding setup with premium marquee and decorations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Corporate Conference</h4>
+                            <p>Professional corporate event setup with branded pavilions and AV systems</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Birthday Celebration</h4>
+                            <p>Colorful party setup with themed decorations and entertainment area</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Community Festival</h4>
+                            <p>Large-scale community event with multiple tents and facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-event" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title-large scroll-reveal">Ready to Plan Your Perfect Event?</h2>
+                <p class="cta-text-large scroll-reveal">
+                    Get a free consultation and customized quote for your event needs. Our experienced team will help you create an unforgettable celebration that exceeds your expectations.
+                </p>
+                <div class="cta-buttons scroll-reveal">
+                    <a href="tel:+254794894910" class="btn-cta-primary">
+                        <i class="fas fa-phone"></i>
+                        Call +254 794 894 910
+                    </a>
+                    <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20event%20services.%20Please%20provide%20more%20information%20and%20a%20free%20consultation." class="btn-cta-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <p>Professional event services in Nyeri. Creating unforgettable celebrations with 11+ years of experience in weddings, corporate events, and special occasions.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Event Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#catalogue">Wedding Tents</a></li>
+                        <li><a href="#catalogue">Furniture Hire</a></li>
+                        <li><a href="#catalogue">Corporate Events</a></li>
+                        <li><a href="#catalogue">Party Equipment</a></li>
+                        <li><a href="shop.html">Event Planning</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon-Sat: 7:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Website by <a href="https://kingscreationagency.co.ke" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20event%20services.%20Please%20provide%20more%20information." class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Fixed Click-based dropdown toggle
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+
+        // Mobile dropdown toggle function
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize Swiper
+        const productSwiper = new Swiper('.product-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        // Enhanced scroll animations using Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add staggered animation delays
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                        
+                        // Special handling for staggered feature items
+                        if (entry.target.classList.contains('service-features-large')) {
+                            const features = entry.target.querySelectorAll('.stagger-animation');
+                            features.forEach((feature, featureIndex) => {
+                                setTimeout(() => {
+                                    feature.classList.add('revealed');
+                                }, featureIndex * 150);
+                            });
+                        }
+                        
+                        // Special handling for gallery items
+                        if (entry.target.classList.contains('gallery-grid')) {
+                            const items = entry.target.querySelectorAll('.gallery-item');
+                            items.forEach((item, itemIndex) => {
+                                setTimeout(() => {
+                                    item.style.animation = `fadeInUp 0.8s ease forwards`;
+                                    item.style.animationDelay = `${itemIndex * 0.2}s`;
+                                }, 100);
+                            });
+                        }
+                        
+                    }, index * 100);
+                    
+                    // Unobserve after animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-up, .scroll-reveal-zoom, .stagger-animation, .bounce-in, .fade-slide, .service-features-large, .gallery-grid').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced floating images animation
+        document.querySelectorAll('.floating-image').forEach((img, index) => {
+            img.addEventListener('mouseenter', function() {
+                this.style.transform = `scale(1.1) rotate(${index % 2 === 0 ? '3deg' : '-3deg'})`;
+                this.style.zIndex = '20';
+            });
+            
+            img.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+                this.style.zIndex = '1';
+            });
+        });
+
+        // Enhanced parallax effects
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            
+            // Floating images parallax
+            document.querySelectorAll('.floating-image').forEach((img, index) => {
+                const speed = 0.1 + (index * 0.02);
+                const yPos = -(scrollTop * speed);
+                const rotation = Math.sin(scrollTop * 0.001 + index) * 3;
+                img.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+            });
+            
+            // Background parallax for sections
+            const parallaxElements = document.querySelectorAll('.page-header, .explore-more-section, .cta-event');
+            parallaxElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const speed = 0.5;
+                const yPos = -(rect.top * speed);
+                element.style.backgroundPosition = `center ${yPos}px`;
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.page-header-content .scroll-reveal-zoom, .page-header-content .scroll-reveal-up, .page-header-content .fade-slide');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('revealed');
+                    }, index * 300);
+                });
+            }, 200);
+        });
+
+        // Add click event to close dropdowns when clicking on menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateOnScroll() {
+            // Parallax and scroll effects here
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // Add CSS keyframes for fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

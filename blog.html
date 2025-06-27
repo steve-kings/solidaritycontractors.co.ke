@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Latest news, tips, and insights about construction, landscaping, and event planning from SBLC experts.">
+    <meta name="keywords" content="construction blog Nyeri, landscaping tips Kenya, building advice, garden maintenance">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            background: var(--light-color);
+        }
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+            overflow-x: hidden;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+            font-size: 10px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 8px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a.active::after {
+            width: 100%;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-menu li:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 8px 15px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+            font-size: 13px;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--text-dark);
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-4px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-4px, -5px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            max-width: 85vw;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 12px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 250px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 12px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 6px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 12px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: 
+                linear-gradient(135deg, rgba(76, 175, 80, 0.9) 0%, rgba(220, 38, 38, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        .blog-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .blog-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .breadcrumb-nav {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: white;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-tab {
+            padding: 12px 25px;
+            background: transparent;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            color: var(--primary-color);
+        }
+
+        /* Loading State */
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 60px 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Featured Post */
+        .featured-post {
+            margin-bottom: 60px;
+        }
+
+        .featured-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .featured-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 40px 30px 30px;
+            color: white;
+        }
+
+        .featured-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .featured-excerpt {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            height: fit-content;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
+            border-color: var(--primary-color);
+        }
+
+        .blog-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lazy-bg {
+            background-color: var(--border-color);
+            background-image: none !important;
+            transition: background-image 0.3s ease;
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-card .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 12px;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .author-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn-read-more {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .btn-read-more:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .blog-share {
+            display: flex;
+            gap: 10px;
+        }
+
+        .share-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        .share-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Pagination */
+        .pagination-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .pagination-btn {
+            padding: 12px 20px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pagination-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .pagination-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-light);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--border-color);
+        }
+
+        .empty-state h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        /* Error State */
+        .error-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-light);
+        }
+
+        .error-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .error-state h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .retry-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .retry-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            color: white;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .blog-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1rem;
+            }
+
+            .filter-tabs {
+                gap: 10px;
+            }
+
+            .filter-tab {
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 15px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .blog-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .filter-container {
+                padding: 0 15px;
+            }
+
+            .pagination-section {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .search-input {
+                font-size: 14px;
+                padding: 12px 45px 12px 15px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-overlay {
+                padding: 20px;
+            }
+
+            .blog-card {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <i class="fas fa-leaf me-2"></i>SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li>
+                        <a href="/services/services.html">
+                            Our Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/services/construction.html">Construction</a></li>
+                            <li><a href="/services/landscaping.html">Landscaping</a></li>
+                            <li><a href="/services/events.html">Event Services</a></li>
+                            <li><a href="/services/buildingmateral.html">Building Materials</a></li>
+                            <li><a href="/services/equipment hire.html">Equipment Hire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><i class="fas fa-leaf me-2"></i>SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li class="mobile-dropdown">
+                <a href="/services/services.html" onclick="toggleMobileDropdown(this)">
+                    Our Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="/services/construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="/services/landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                    <li><a href="/services/events.html" onclick="closeMobileMenu()">Event Services</a></li>
+                    <li><a href="/services/equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="/services/buildingmateral.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                </ul>
+            </li>
+            <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="blog-header-content">
+                <h1 class="blog-title animate-on-scroll">SBLC Blog</h1>
+                <p class="blog-subtitle animate-on-scroll">Expert insights, tips, and latest updates on construction, landscaping, and event planning from our professional team.</p>
+                <nav class="breadcrumb-nav animate-on-scroll">
+                    <a href="index.html">Home</a> / <span>Blog</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <span class="filter-tab active" onclick="filterPosts('all')">All Posts</span>
+                <span class="filter-tab" onclick="filterPosts('construction')">Construction</span>
+                <span class="filter-tab" onclick="filterPosts('landscaping')">Landscaping</span>
+                <span class="filter-tab" onclick="filterPosts('events')">Events</span>
+                <span class="filter-tab" onclick="filterPosts('tips')">Tips & Guides</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search blog posts..." id="searchInput">
+                <button class="search-btn" onclick="performSearch()"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-spinner">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading blog posts...</div>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error-state" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Unable to Load Blog Posts</h3>
+            <p>We're having trouble connecting to our blog database. Please check your internet connection and try again.</p>
+            <button class="retry-btn" onclick="loadPosts()">
+                <i class="fas fa-redo"></i> Retry Loading
+            </button>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <i class="fas fa-blog"></i>
+            <h3>No Blog Posts Available</h3>
+            <p>We're currently working on new content. Please check back soon for expert insights and tips from our team.</p>
+        </div>
+
+        <!-- Featured Post -->
+        <div id="featuredPost" class="featured-post" style="display: none;">
+            <!-- Featured post will be loaded here -->
+        </div>
+
+        <!-- Blog Grid -->
+        <div id="blogContainer" class="blog-grid" style="display: none;">
+            <!-- Blog posts will be loaded here dynamically -->
+        </div>
+
+        <!-- Pagination -->
+        <div id="paginationSection" class="pagination-section" style="display: none;">
+            <button class="pagination-btn" id="prevBtn" onclick="loadPreviousPage()">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span class="pagination-info" id="paginationInfo">Page 1 of 1</span>
+            <button class="pagination-btn" id="nextBtn" onclick="loadNextPage()">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%20have%20a%20question%20about%20your%20services.%20Can%20you%20help%20me%3F" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ==========================================
+        // WORDPRESS API CONFIGURATION
+        // ==========================================
+        const WORDPRESS_CONFIG = {
+            // Your WordPress API endpoint
+            baseUrl: 'https://shop.solidaritycontractors.co.ke/wp-json/wp/v2',
+            
+            // Your WordPress site URL for post links
+            siteUrl: 'https://shop.solidaritycontractors.co.ke',
+            
+            // Posts per page
+            postsPerPage: 9,
+            
+            // Featured image sizes (WordPress image sizes)
+            imageSizes: {
+                featured: 'large',
+                thumbnail: 'medium'
+            }
+        };
+
+        // ==========================================
+        // GLOBAL VARIABLES
+        // ==========================================
+        let allPosts = [];
+        let filteredPosts = [];
+        let currentPage = 1;
+        let totalPages = 1;
+        let currentCategory = 'all';
+        let currentSearch = '';
+        let isLoading = false;
+        let featuredPost = null;
+
+        // ==========================================
+        // WORDPRESS API SERVICE
+        // ==========================================
+        class WordPressAPI {
+            constructor(config) {
+                this.config = config;
+                this.cache = new Map();
+            }
+
+            async makeRequest(endpoint, params = {}) {
+                try {
+                    const url = new URL(`${this.config.baseUrl}${endpoint}`);
+                    
+                    // Add parameters
+                    Object.entries(params).forEach(([key, value]) => {
+                        if (value !== undefined && value !== null && value !== '') {
+                            url.searchParams.append(key, value.toString());
+                        }
+                    });
+
+                    console.log('Making API request to:', url.toString());
+
+                    const response = await fetch(url.toString(), {
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    
+                    // Get total pages from headers
+                    const totalPages = response.headers.get('X-WP-TotalPages');
+                    return {
+                        data: data,
+                        totalPages: totalPages ? parseInt(totalPages) : 1
+                    };
+                } catch (error) {
+                    console.error('WordPress API Error:', error);
+                    throw error;
+                }
+            }
+
+            async getPosts(params = {}) {
+                const defaultParams = {
+                    per_page: this.config.postsPerPage,
+                    status: 'publish',
+                    orderby: 'date',
+                    order: 'desc',
+                    _embed: true, // Include featured media and author info
+                    _fields: 'id,date,title,excerpt,content,link,categories,tags,_embedded,_links' // Only fetch needed fields
+                };
+
+                const finalParams = { ...defaultParams, ...params };
+                return await this.makeRequest('/posts', finalParams);
+            }
+
+            async getPostsByCategory(categorySlug, params = {}) {
+                // First get category ID
+                try {
+                    const categoriesResponse = await this.makeRequest('/categories', { slug: categorySlug });
+                    if (categoriesResponse.data.length > 0) {
+                        const categoryId = categoriesResponse.data[0].id;
+                        return await this.getPosts({ ...params, categories: categoryId });
+                    }
+                } catch (error) {
+                    console.warn('Category not found, returning all posts');
+                }
+                return await this.getPosts(params);
+            }
+
+            async searchPosts(searchTerm, params = {}) {
+                return await this.getPosts({ ...params, search: searchTerm });
+            }
+
+            async getFeaturedPosts(params = {}) {
+                // Get posts marked as sticky (featured)
+                return await this.getPosts({ ...params, sticky: true, per_page: 1 });
+            }
+
+            // Helper methods
+            getPostUrl(post) {
+                return post.link || `${this.config.siteUrl}/?p=${post.id}`;
+            }
+
+            getFeaturedImage(post, size = 'large') {
+                if (post._embedded && post._embedded['wp:featuredmedia']) {
+                    const media = post._embedded['wp:featuredmedia'][0];
+                    if (media.media_details && media.media_details.sizes && media.media_details.sizes[size]) {
+                        return media.media_details.sizes[size].source_url;
+                    }
+                    return media.source_url;
+                }
+                return null;
+            }
+
+            getAuthorName(post) {
+                if (post._embedded && post._embedded.author) {
+                    return post._embedded.author[0].name;
+                }
+                return 'SBLC Team';
+            }
+
+            getCategoryName(post) {
+                if (post._embedded && post._embedded['wp:term']) {
+                    const categories = post._embedded['wp:term'][0];
+                    if (categories && categories.length > 0) {
+                        return categories[0].name;
+                    }
+                }
+                return 'General';
+            }
+
+            stripHtml(html) {
+                if (!html) return '';
+                const tmp = document.createElement('div');
+                tmp.innerHTML = html;
+                return tmp.textContent || tmp.innerText || '';
+            }
+
+            formatDate(dateString) {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+
+            calculateReadTime(content) {
+                const wordsPerMinute = 200;
+                const words = this.stripHtml(content).split(' ').length;
+                const readTime = Math.ceil(words / wordsPerMinute);
+                return `${readTime} min read`;
+            }
+        }
+
+        // ==========================================
+        // BLOG INTERFACE
+        // ==========================================
+        class BlogInterface {
+            constructor() {
+                this.api = new WordPressAPI(WORDPRESS_CONFIG);
+            }
+
+            async loadPosts(category = 'all', search = '', page = 1) {
+                if (isLoading) return;
+                
+                isLoading = true;
+                this.showLoadingState();
+
+                try {
+                    let postsResponse;
+                    
+                    if (search) {
+                        postsResponse = await this.api.searchPosts(search, { page: page });
+                    } else if (category !== 'all') {
+                        postsResponse = await this.api.getPostsByCategory(category, { page: page });
+                    } else {
+                        postsResponse = await this.api.getPosts({ page: page });
+                    }
+
+                    allPosts = postsResponse.data;
+                    totalPages = postsResponse.totalPages;
+                    currentPage = page;
+                    
+                    // Load featured post on first page only
+                    if (page === 1 && category === 'all' && !search) {
+                        await this.loadFeaturedPost();
+                    } else {
+                        this.hideFeaturedPost();
+                    }
+                    
+                    if (allPosts.length === 0) {
+                        this.showEmptyState();
+                    } else {
+                        this.renderPosts(allPosts);
+                        this.updatePagination();
+                        this.hideLoadingState();
+                    }
+                    
+                } catch (error) {
+                    console.error('Error loading posts:', error);
+                    this.showErrorState();
+                } finally {
+                    isLoading = false;
+                }
+            }
+
+            async loadFeaturedPost() {
+                try {
+                    const featuredResponse = await this.api.getFeaturedPosts();
+                    if (featuredResponse.data.length > 0) {
+                        featuredPost = featuredResponse.data[0];
+                        this.renderFeaturedPost(featuredPost);
+                        this.showFeaturedPost();
+                    } else {
+                        // Use first post as featured if no sticky posts
+                        if (allPosts.length > 0) {
+                            featuredPost = allPosts[0];
+                            this.renderFeaturedPost(featuredPost);
+                            this.showFeaturedPost();
+                            // Remove featured post from regular posts
+                            allPosts = allPosts.slice(1);
+                        }
+                    }
+                } catch (error) {
+                    console.warn('Could not load featured post:', error);
+                }
+            }
+
+
+
+            renderFeaturedPost(post) {
+                const container = document.getElementById('featuredPost');
+                const image = this.api.getFeaturedImage(post, 'large') || this.getPlaceholderImage();
+                const category = this.api.getCategoryName(post);
+                const author = this.api.getAuthorName(post);
+                const readTime = this.api.calculateReadTime(post.content.rendered);
+                const excerpt = this.api.stripHtml(post.excerpt.rendered) || this.api.stripHtml(post.content.rendered).substring(0, 200) + '...';
+
+                container.innerHTML = `
+                    <div class="featured-card animate-on-scroll">
+                        <div class="featured-image lazy-bg" data-bg="${image}">
+                            <div class="featured-badge">Featured Post</div>
+                            <div class="featured-overlay">
+                                <h2 class="featured-title">${post.title.rendered}</h2>
+                                <p class="featured-excerpt">${excerpt}</p>
+                                <div class="featured-meta">
+                                    <span><i class="fas fa-user"></i> ${author}</span>
+                                    <span><i class="fas fa-calendar"></i> ${this.api.formatDate(post.date)}</span>
+                                    <span><i class="fas fa-clock"></i> ${readTime}</span>
+                                    <span><i class="fas fa-tag"></i> ${category}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            renderPosts(posts) {
+                const container = document.getElementById('blogContainer');
+                
+                if (!posts || posts.length === 0) {
+                    this.showEmptyState();
+                    return;
+                }
+
+                container.innerHTML = posts.map(post => this.renderPostCard(post)).join('');
+                container.style.display = 'grid';
+                
+                // Trigger animation observer
+                setTimeout(() => {
+                    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                        if (!el.classList.contains('animated')) {
+                            observer.observe(el);
+                        }
+                    });
+                    
+                    // Initialize lazy loading for background images
+                    this.initLazyLoading();
+                }, 100);
+            }
+
+            renderPostCard(post) {
+                const image = this.api.getFeaturedImage(post) || this.getPlaceholderImage();
+                const category = this.api.getCategoryName(post);
+                const author = this.api.getAuthorName(post);
+                const readTime = this.api.calculateReadTime(post.content.rendered);
+                const excerpt = this.api.stripHtml(post.excerpt.rendered) || this.api.stripHtml(post.content.rendered).substring(0, 150) + '...';
+                const postUrl = this.api.getPostUrl(post);
+
+                return `
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-image lazy-bg" data-bg="${image}">
+                            <div class="blog-category">${category}</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">${post.title.rendered}</h3>
+                            <p class="blog-excerpt">${excerpt}</p>
+                            <div class="blog-meta">
+                                <div class="blog-author">
+                                    <div class="author-avatar">${author.charAt(0).toUpperCase()}</div>
+                                    <span>${author}</span>
+                                </div>
+                                <div class="blog-date">
+                                    <i class="fas fa-calendar"></i> ${this.api.formatDate(post.date)}
+                                </div>
+                            </div>
+                            <div class="blog-actions">
+                                <a href="${postUrl}" class="btn-read-more" target="_blank" rel="noopener">
+                                    <i class="fas fa-book-open"></i> Read More
+                                </a>
+                                <div class="blog-share">
+                                    <button class="share-btn" onclick="sharePost('${postUrl}', '${post.title.rendered.replace(/'/g, "\\'")}', 'whatsapp')" title="Share on WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </button>
+                                    <button class="share-btn" onclick="sharePost('${postUrl}', '${post.title.rendered.replace(/'/g, "\\'")}', 'twitter')" title="Share on Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="share-btn" onclick="sharePost('${postUrl}', '${post.title.rendered.replace(/'/g, "\\'")}', 'facebook')" title="Share on Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            updatePagination() {
+                const paginationSection = document.getElementById('paginationSection');
+                const paginationInfo = document.getElementById('paginationInfo');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+
+                if (totalPages > 1) {
+                    paginationSection.style.display = 'flex';
+                    paginationInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                    
+                    prevBtn.disabled = currentPage <= 1;
+                    nextBtn.disabled = currentPage >= totalPages;
+                } else {
+                    paginationSection.style.display = 'none';
+                }
+            }
+
+            showLoadingState() {
+                document.getElementById('loadingState').style.display = 'flex';
+                document.getElementById('errorState').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'none';
+                document.getElementById('blogContainer').style.display = 'none';
+                document.getElementById('paginationSection').style.display = 'none';
+            }
+
+            hideLoadingState() {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'none';
+                document.getElementById('blogContainer').style.display = 'grid';
+            }
+
+            showErrorState() {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'block';
+                document.getElementById('emptyState').style.display = 'none';
+                document.getElementById('blogContainer').style.display = 'none';
+                document.getElementById('paginationSection').style.display = 'none';
+                this.hideFeaturedPost();
+            }
+
+            showEmptyState() {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'block';
+                document.getElementById('blogContainer').style.display = 'none';
+                document.getElementById('paginationSection').style.display = 'none';
+                this.hideFeaturedPost();
+            }
+
+            showFeaturedPost() {
+                document.getElementById('featuredPost').style.display = 'block';
+            }
+
+            hideFeaturedPost() {
+                document.getElementById('featuredPost').style.display = 'none';
+            }
+
+            getPlaceholderImage() {
+                return 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect width="800" height="400" fill="%234CAF50"/><text x="400" y="200" text-anchor="middle" fill="%23ffffff" font-size="24" font-family="Arial">SBLC Blog Post</text><text x="400" y="240" text-anchor="middle" fill="%23ffffff" font-size="16" font-family="Arial">Construction • Landscaping • Events</text></svg>';
+            }
+
+            initLazyLoading() {
+                const lazyBgObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const element = entry.target;
+                            const bgImage = element.dataset.bg;
+                            if (bgImage) {
+                                element.style.backgroundImage = `url('${bgImage}')`;
+                                element.classList.remove('lazy-bg');
+                                lazyBgObserver.unobserve(element);
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.lazy-bg').forEach(el => {
+                    lazyBgObserver.observe(el);
+                });
+            }
+
+            showToast(message, type = 'info') {
+                // Remove existing toast
+                const existingToast = document.querySelector('.toast-notification');
+                if (existingToast) {
+                    existingToast.remove();
+                }
+
+                const toast = document.createElement('div');
+                toast.className = `toast-notification ${type}`;
+                toast.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    padding: 15px 20px;
+                    border-radius: 12px;
+                    color: white;
+                    font-weight: 500;
+                    z-index: 9999;
+                    animation: slideInRight 0.3s ease;
+                    min-width: 320px;
+                    box-shadow: var(--shadow-large);
+                    background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#DC2626' : '#2563eb'};
+                `;
+                toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i> ${message}`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 4000);
+            }
+        }
+
+        // ==========================================
+        // GLOBAL FUNCTIONS
+        // ==========================================
+        
+        // Initialize blog interface
+        const blog = new BlogInterface();
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Post filtering
+        function filterPosts(category) {
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            currentCategory = category;
+            currentPage = 1;
+            blog.loadPosts(category, currentSearch, 1);
+        }
+
+        // Search functionality
+        let searchTimeout;
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            currentSearch = searchTerm;
+            currentPage = 1;
+            blog.loadPosts(currentCategory, searchTerm, 1);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            const searchTerm = e.target.value.trim();
+            
+            // Faster search response time
+            searchTimeout = setTimeout(() => {
+                currentSearch = searchTerm;
+                currentPage = 1;
+                blog.loadPosts(currentCategory, searchTerm, 1);
+            }, 300);
+        });
+
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Pagination functions
+        function loadNextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                blog.loadPosts(currentCategory, currentSearch, currentPage);
+            }
+        }
+
+        function loadPreviousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                blog.loadPosts(currentCategory, currentSearch, currentPage);
+            }
+        }
+
+        // Share functionality
+        function sharePost(url, title, platform) {
+            const encodedUrl = encodeURIComponent(url);
+            const encodedTitle = encodeURIComponent(title);
+            
+            let shareUrl;
+            
+            switch (platform) {
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                    break;
+                default:
+                    return;
+            }
+            
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // Load posts
+        function loadPosts() {
+            blog.loadPosts(currentCategory, currentSearch, currentPage);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Preload critical resources
+        function preloadCriticalResources() {
+            // Preload API endpoint
+            const link = document.createElement('link');
+            link.rel = 'dns-prefetch';
+            link.href = WORDPRESS_CONFIG.baseUrl;
+            document.head.appendChild(link);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload resources first
+            preloadCriticalResources();
+            
+            // Load initial posts
+            loadPosts();
+            
+            // Observe elements for animation
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

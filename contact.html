@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Get in touch with Solidarity Building & Landscape Contractors Ltd. Visit our offices in Nyeri or contact us for construction, landscaping, and event services.">
+    <meta name="keywords" content="contact SBLC, Nyeri contractors, construction company contact, landscaping services contact, Nyeri-Nairobi Highway">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #DC2626;
+            --secondary-color: #4CAF50;
+            --accent-color: #FF6B6B;
+            --dark-color: #1F2937;
+            --light-color: #FEF2F2;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #FEE2E2;
+            --gradient-primary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-secondary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-accent: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+            --gradient-dark: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+            --shadow-light: 0 4px 6px -1px rgb(220 38 38 / 0.1), 0 2px 4px -2px rgb(220 38 38 / 0.1);
+            --shadow-medium: 0 10px 15px -3px rgb(220 38 38 / 0.1), 0 4px 6px -4px rgb(220 38 38 / 0.1);
+            --shadow-large: 0 25px 50px -12px rgb(220 38 38 / 0.25);
+            --shadow-colored: 0 20px 25px -5px rgb(220 38 38 / 0.15), 0 8px 10px -6px rgb(220 38 38 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            background: linear-gradient(145deg, #fefefe 0%, #f8fafc 100%);
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 12px;
+            font-weight: 500;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .top-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.2"/></pattern></defs><rect width="100" height="20" fill="url(%23dots)"/></svg>');
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            font-size: 11px;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-header {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-header a {
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            font-size: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px) scale(1.1);
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            border-radius: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: var(--gradient-primary);
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+            transform: translateY(-1px);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a.active::after {
+            width: 100%;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-menu li:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 8px 15px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+            font-size: 13px;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            max-width: 90vw;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.4s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(220, 38, 38, 0.3);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 12px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 250px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 12px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 6px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 12px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: 
+                linear-gradient(135deg, rgba(220, 38, 38, 0.85) 0%, rgba(76, 175, 80, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 60px 0 40px;
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            opacity: 0.95;
+            max-width: 90%;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .breadcrumb-nav {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        /* Contact Info Cards */
+        .contact-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .contact-card:hover::before {
+            left: 100%;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-colored);
+            border-color: var(--primary-color);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .contact-card h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        .contact-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-action-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-action-btn:hover {
+            background: var(--gradient-accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact-action-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .contact-action-btn.whatsapp:hover {
+            background: #128C7E;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            padding: 60px 0;
+            background: var(--light-color);
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-medium);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--text-light);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-color);
+        }
+
+        .checkbox-item label {
+            font-size: 14px;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .submit-btn:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Office Locations */
+        .locations-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .location-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .location-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+        }
+
+        .location-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .location-header h3 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .location-header p {
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .location-map {
+            height: 300px;
+            position: relative;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-info {
+            padding: 25px;
+        }
+
+        .location-details {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .location-details li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .location-details li i {
+            color: var(--primary-color);
+            width: 18px;
+            font-size: 1.1rem;
+        }
+
+        .location-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .location-btn {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+
+        .location-btn.directions {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .location-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .location-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        /* Success/Error Messages */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: none;
+            font-weight: 500;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--primary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-2px);
+            color: white;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                font-size: 10px;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                gap: 12px;
+            }
+
+            .contact-info span {
+                font-size: 10px;
+                padding: 3px 8px;
+            }
+
+            .page-header {
+                padding: 40px 0 30px;
+                min-height: 40vh;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .page-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-card {
+                padding: 25px;
+            }
+
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .form-container {
+                padding: 25px;
+                margin: 0 15px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .location-cards {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .location-map {
+                height: 250px;
+            }
+
+            .location-actions {
+                flex-direction: column;
+            }
+
+            .location-btn {
+                min-width: auto;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .page-title {
+                font-size: 1.6rem;
+            }
+
+            .form-container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+
+            .location-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .location-card {
+                margin: 0 10px;
+            }
+
+            .mobile-sidebar {
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li>
+                        <a href="#services">
+                            Our Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#construction">Construction</a></li>
+                            <li><a href="#landscaping">Landscaping</a></li>
+                            <li><a href="#events">Event Services</a></li>
+                            <li><a href="#nursery">Plant Nursery</a></li>
+                            <li><a href="#materials">Building Materials</a></li>
+                            <li><a href="#equipment">Equipment Hire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li class="mobile-dropdown">
+                <a href="#services" onclick="toggleMobileDropdown(this)">
+                    Our Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="#construction" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="#landscaping" onclick="closeMobileMenu()">Landscaping</a></li>
+                    <li><a href="#events" onclick="closeMobileMenu()">Event Services</a></li>
+                    <li><a href="#nursery" onclick="closeMobileMenu()">Plant Nursery</a></li>
+                    <li><a href="#materials" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="#equipment" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="#shop" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title animate-on-scroll">Contact Us</h1>
+                <p class="page-subtitle animate-on-scroll">Get in touch with us for all your construction, landscaping, and event service needs. We're here to help bring your vision to life.</p>
+                <nav class="breadcrumb-nav animate-on-scroll">
+                    <a href="index.html">Home</a> / <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-muted">Choose the best way to reach us</p>
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>Speak directly with our team for immediate assistance</p>
+                    <p><strong>Primary:</strong> <a href="tel:+254794894910">+254 794 894 910</a></p>
+                    <p><strong>Secondary:</strong> <a href="tel:+254789023782">+254 789 023 782</a></p>
+                    <a href="tel:+254794894910" class="contact-action-btn">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>Quick and convenient messaging for instant responses</p>
+                    <p><strong>Available:</strong> 24/7 for inquiries</p>
+                    <p><strong>Response Time:</strong> Within 30 minutes</p>
+                    <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20reaching%20out%20through%20your%20website%20contact%20page.%20I%27m%20interested%20in%20your%20services%20and%20would%20like%20to%20discuss%3A%0A%0A%F0%9F%8F%97%EF%B8%8F%20SERVICE%20INTEREST%3A%0A%5B%20%5D%20Construction%20%26%20Building%0A%5B%20%5D%20Landscaping%20%26%20Garden%20Design%0A%5B%20%5D%20Event%20Services%20%26%20Planning%0A%5B%20%5D%20Plant%20Nursery%20%26%20Supplies%0A%5B%20%5D%20Equipment%20Rental%0A%5B%20%5D%20General%20Inquiry%0A%0A%F0%9F%93%8D%20PROJECT%20DETAILS%3A%0A-%20Location%3A%20%5BYour%20Location%5D%0A-%20Project%20Type%3A%20%5BResidential%2FCommercial%2FEvent%5D%0A-%20Timeline%3A%20%5BWhen%20you%20need%20it%5D%0A-%20Budget%20Range%3A%20%5BApproximate%20budget%5D%0A%0A%F0%9F%93%9E%20PREFERRED%20CONTACT%3A%0A-%20Name%3A%20%5BYour%20Name%5D%0A-%20Best%20time%20to%20call%3A%20%5BTime%5D%0A%0APlease%20let%20me%20know%20how%20we%20can%20help%20with%20your%20project.%20Thank%20you!" class="contact-action-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>Send detailed inquiries and receive comprehensive responses</p>
+                    <p><strong>Email:</strong> <a href="mailto:solidaritybuildingcontractors@gmail.com">solidaritybuildingcontractors@gmail.com</a></p>
+                    <p><strong>Response Time:</strong> Within 24 hours</p>
+                    <a href="mailto:solidaritybuildingcontractors@gmail.com?subject=Inquiry from Website - [Your Service Interest]&body=Hello SBLC Team,%0A%0AI'm reaching out through your website and would like to inquire about your services.%0A%0ASERVICE INTEREST:%0A[ ] Construction & Building%0A[ ] Landscaping & Garden Design%0A[ ] Event Services & Planning%0A[ ] Plant Nursery & Supplies%0A[ ] Equipment Rental%0A%0APROJECT DETAILS:%0A- Name: [Your Name]%0A- Phone: [Your Phone Number]%0A- Location: [Your Location]%0A- Project Type: [Residential/Commercial/Event]%0A- Timeline: [When you need it]%0A- Budget Range: [Approximate budget]%0A- Specific Requirements: [Your specific needs]%0A%0AADDITIONAL INFORMATION:%0A[Please share any additional details about your project]%0A%0ABest time to contact me: [Your preferred time]%0A%0AThank you for your time. I look forward to hearing from you.%0A%0ABest regards,%0A[Your Name]" class="contact-action-btn">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Business Hours</h4>
+                    <p>Visit us during our working hours for face-to-face consultation</p>
+                    <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 8:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> Emergency calls only</p>
+                    <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27d%20like%20to%20schedule%20a%20visit%20to%20your%20office%20during%20business%20hours.%0A%0A%F0%9F%93%85%20VISIT%20DETAILS%3A%0A-%20Preferred%20Date%3A%20%5BDate%5D%0A-%20Preferred%20Time%3A%20%5BTime%5D%0A-%20Office%20Location%3A%20%5BHeadquarters%2FLandscaping%20Branch%5D%0A-%20Purpose%3A%20%5BConsultation%2FQuotation%2FProject%20Discussion%5D%0A%0A%F0%9F%91%A4%20CONTACT%20DETAILS%3A%0A-%20Name%3A%20%5BYour%20Name%5D%0A-%20Phone%3A%20%5BYour%20Phone%5D%0A-%20Number%20of%20people%3A%20%5BGroup%20size%5D%0A%0A%F0%9F%93%8B%20SERVICE%20INTEREST%3A%0A%5B%20%5D%20Construction%20consultation%0A%5B%20%5D%20Landscaping%20design%0A%5B%20%5D%20Event%20planning%0A%5B%20%5D%20Plant%20nursery%20visit%0A%5B%20%5D%20General%20inquiry%0A%0APlease%20confirm%20the%20appointment.%20Thank%20you!" class="contact-action-btn">
+                        <i class="fas fa-calendar-check"></i> Schedule Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="text-muted">Fill out the form below and we'll get back to you as soon as possible</p>
+            </div>
+
+            <div class="form-container animate-on-scroll">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <!-- W3Forms Access Key - Replace with your actual key -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    
+                    <!-- Hidden fields for better organization -->
+                    <input type="hidden" name="subject" value="New Contact Form Submission - SBLC Website">
+                    <input type="hidden" name="from_name" value="SBLC Contact Form">
+                    
+                    <!-- Honeypot spam protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+254 xxx xxx xxx" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="form-label">Project Location</label>
+                            <input type="text" id="location" name="location" class="form-control" placeholder="City/Town where your project is located">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Services Needed *</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="construction" name="services[]" value="Construction & Building">
+                                <label for="construction">Construction & Building</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="landscaping" name="services[]" value="Landscaping & Garden Design">
+                                <label for="landscaping">Landscaping & Garden Design</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="events" name="services[]" value="Event Services & Planning">
+                                <label for="events">Event Services & Planning</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="nursery" name="services[]" value="Plant Nursery & Supplies">
+                                <label for="nursery">Plant Nursery & Supplies</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="equipment" name="services[]" value="Equipment Rental">
+                                <label for="equipment">Equipment Rental</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="consultation" name="services[]" value="Consultation Only">
+                                <label for="consultation">Consultation Only</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Budget Range</label>
+                            <select id="budget" name="budget" class="form-control">
+                                <option value="">Select budget range</option>
+                                <option value="Under 100,000 KSH">Under 100,000 KSH</option>
+                                <option value="100,000 - 500,000 KSH">100,000 - 500,000 KSH</option>
+                                <option value="500,000 - 1,000,000 KSH">500,000 - 1,000,000 KSH</option>
+                                <option value="1,000,000 - 5,000,000 KSH">1,000,000 - 5,000,000 KSH</option>
+                                <option value="Above 5,000,000 KSH">Above 5,000,000 KSH</option>
+                                <option value="Prefer to discuss">Prefer to discuss</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline" class="form-label">Project Timeline</label>
+                            <select id="timeline" name="timeline" class="form-control">
+                                <option value="">When do you want to start?</option>
+                                <option value="ASAP">As soon as possible</option>
+                                <option value="Within 1 month">Within 1 month</option>
+                                <option value="1-3 months">1-3 months</option>
+                                <option value="3-6 months">3-6 months</option>
+                                <option value="6+ months">6+ months</option>
+                                <option value="Just planning">Just planning ahead</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Details *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Please describe your project in detail. Include any specific requirements, dimensions, materials, design preferences, or any other relevant information that will help us provide you with an accurate quote." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_preference" class="form-label">Preferred Contact Method</label>
+                        <select id="contact_preference" name="contact_preference" class="form-control">
+                            <option value="WhatsApp">WhatsApp</option>
+                            <option value="Phone Call">Phone Call</option>
+                            <option value="Email">Email</option>
+                            <option value="Any method">Any method is fine</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success/Error Messages -->
+                <div id="result" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations with Maps -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2 class="section-title">Our Locations</h2>
+                <p class="text-muted">Visit us at either of our convenient locations</p>
+            </div>
+
+            <div class="location-cards">
+                <!-- Headquarters -->
+                <div class="location-card animate-on-scroll">
+                    <div class="location-header">
+                        <h3><i class="fas fa-building"></i> Headquarters</h3>
+                        <p>Main Office & Construction Services</p>
+                    </div>
+                    <div class="location-map">
+                        <!-- Replace this iframe src with your actual Google Maps embed URL for headquarters -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.234567890123!2d36.9484!3d-0.4167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNyeri-Nairobi%20Highway%2C%20Skuta!5e0!3m2!1sen!2ske!4v1640000000000!5m2!1sen!2ske"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="location-info">
+                        <ul class="location-details">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nyeri-Nairobi Highway, Skuta</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+254 794 894 910</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 8AM-6PM, Sat: 8AM-4PM</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-tools"></i>
+                                <span>Construction, Building Materials, Equipment Hire</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://maps.google.com/?q=Nyeri-Nairobi+Highway+Skuta" target="_blank" class="location-btn directions">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                            <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27d%20like%20to%20visit%20your%20headquarters%20office%20at%20Nyeri-Nairobi%20Highway%2C%20Skuta.%0A%0A%F0%9F%8F%A2%20VISIT%20PURPOSE%3A%0A%5B%20%5D%20Construction%20consultation%0A%5B%20%5D%20Building%20materials%20inquiry%0A%5B%20%5D%20Equipment%20hire%0A%5B%20%5D%20Project%20quotation%0A%5B%20%5D%20General%20meeting%0A%0A%F0%9F%93%85%20PREFERRED%20VISIT%20TIME%3A%0A-%20Date%3A%20%5BYour%20preferred%20date%5D%0A-%20Time%3A%20%5BYour%20preferred%20time%5D%0A%0A%F0%9F%91%A4%20VISITOR%20DETAILS%3A%0A-%20Name%3A%20%5BYour%20Name%5D%0A-%20Phone%3A%20%5BYour%20Phone%5D%0A-%20Number%20of%20people%3A%20%5BGroup%20size%5D%0A%0A%F0%9F%93%8B%20PROJECT%20DETAILS%3A%0A-%20Type%3A%20%5BResidential%2FCommercial%5D%0A-%20Location%3A%20%5BProject%20location%5D%0A-%20Scope%3A%20%5BBrief%20description%5D%0A%0APlease%20confirm%20the%20appointment.%20Thank%20you!" class="location-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i> Visit HQ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landscaping Branch -->
+                <div class="location-card animate-on-scroll">
+                    <div class="location-header">
+                        <h3><i class="fas fa-seedling"></i> Landscaping Branch</h3>
+                        <p>Catherine Landscapers Gardens</p>
+                    </div>
+                    <div class="location-map">
+                        <!-- Replace this iframe src with your actual Google Maps embed URL for landscaping branch -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.234567890123!2d36.9584!3d-0.4067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNyeri-Karatina%20Road!5e0!3m2!1sen!2ske!4v1640000000000!5m2!1sen!2ske"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="location-info">
+                        <ul class="location-details">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Catherine Landscapers Gardens, Nyeri-Karatina Road</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+254 789 023 782</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 8AM-6PM, Sat: 8AM-4PM</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-leaf"></i>
+                                <span>Landscaping, Plant Nursery, Garden Design</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://maps.google.com/?q=Catherine+Landscapers+Gardens+Nyeri-Karatina+Road" target="_blank" class="location-btn directions">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                            <a href="https://wa.me/254789023782?text=Hello%20SBLC!%20I%27d%20like%20to%20visit%20Catherine%20Landscapers%20Gardens%20on%20Nyeri-Karatina%20Road.%0A%0A%F0%9F%8C%B1%20VISIT%20PURPOSE%3A%0A%5B%20%5D%20Landscaping%20consultation%0A%5B%20%5D%20Plant%20nursery%20shopping%0A%5B%20%5D%20Garden%20design%20discussion%0A%5B%20%5D%20Plant%20care%20advice%0A%5B%20%5D%20Browse%20plant%20selection%0A%0A%F0%9F%93%85%20PREFERRED%20VISIT%20TIME%3A%0A-%20Date%3A%20%5BYour%20preferred%20date%5D%0A-%20Time%3A%20%5BYour%20preferred%20time%5D%0A%0A%F0%9F%91%A4%20VISITOR%20DETAILS%3A%0A-%20Name%3A%20%5BYour%20Name%5D%0A-%20Phone%3A%20%5BYour%20Phone%5D%0A-%20Number%20of%20people%3A%20%5BGroup%20size%5D%0A%0A%F0%9F%8F%A1%20PROJECT%20DETAILS%3A%0A-%20Property%20type%3A%20%5BResidential%2FCommercial%5D%0A-%20Garden%20size%3A%20%5BApproximate%20size%5D%0A-%20Landscaping%20style%3A%20%5BModern%2FTraditional%2FTropical%5D%0A-%20Specific%20needs%3A%20%5BYour%20requirements%5D%0A%0APlease%20confirm%20the%20appointment.%20Thank%20you!" class="location-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i> Visit Branch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--gradient-dark); color: white; padding: 80px 0 30px;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 style="color: var(--accent-color); display: flex; align-items: center;"><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3" style="color: var(--accent-color);"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3" style="color: var(--accent-color);"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3" style="color: var(--accent-color);"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3" style="color: var(--accent-color);"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 style="color: var(--accent-color);">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" style="color: #94a3b8;">Home</a></li>
+                        <li><a href="about.html" style="color: #94a3b8;">About</a></li>
+                        <li><a href="#services" style="color: #94a3b8;">Services</a></li>
+                        <li><a href="projects.html" style="color: #94a3b8;">Projects</a></li>
+                        <li><a href="contact.html" style="color: #94a3b8;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 style="color: var(--accent-color);">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color: #94a3b8;">Construction</a></li>
+                        <li><a href="#" style="color: #94a3b8;">Landscaping</a></li>
+                        <li><a href="#" style="color: #94a3b8;">Event Services</a></li>
+                        <li><a href="#" style="color: #94a3b8;">Plant Nursery</a></li>
+                        <li><a href="#" style="color: #94a3b8;">Equipment Hire</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 style="color: var(--accent-color);">Contact Info</h5>
+                    <p style="color: #94a3b8;"><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p style="color: #94a3b8;"><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p style="color: #94a3b8;"><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p style="color: #94a3b8;"><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #475569; padding-top: 30px; text-align: center; color: #94a3b8; margin-top: 40px;">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Website by <a href="https://kingscreationagency.co.ke" target="_blank" style="color: var(--accent-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%20SBLC!%20I%27m%20contacting%20you%20through%20your%20website%20contact%20page.%20I%27m%20interested%20in%20your%20services%20and%20would%20like%20to%20discuss%20my%20project%20requirements.%0A%0A%F0%9F%93%8B%20QUICK%20INQUIRY%3A%0A%5B%20%5D%20Construction%20%26%20Building%0A%5B%20%5D%20Landscaping%20%26%20Garden%20Design%0A%5B%20%5D%20Event%20Services%20%26%20Planning%0A%5B%20%5D%20Plant%20Nursery%20%26%20Supplies%0A%5B%20%5D%20Equipment%20Rental%0A%5B%20%5D%20General%20Consultation%0A%0A%F0%9F%93%8D%20BASIC%20INFO%3A%0A-%20Location%3A%20%5BYour%20Location%5D%0A-%20Timeline%3A%20%5BWhen%20you%20need%20it%5D%0A-%20Contact%20preference%3A%20%5BCall%2FWhatsApp%2FEmail%5D%0A%0APlease%20let%20me%20know%20the%20best%20time%20to%20discuss%20further.%20Thank%20you!" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // Contact Form Handling
+        const form = document.getElementById('contactForm');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Please wait...";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</div>';
+                    form.reset();
+                } else {
+                    console.log(response);
+                    result.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle me-2"></i>Something went wrong! Please try again or contact us directly via WhatsApp or phone.</div>';
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle me-2"></i>Something went wrong! Please try again or contact us directly via WhatsApp or phone.</div>';
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 5000);
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.page-header-content .animate-on-scroll');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 150);
+                });
+            }, 100);
+        });
+
+        // Form validation enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCheckboxes = document.querySelectorAll('input[name="services[]"]');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            function validateServices() {
+                const checkedServices = document.querySelectorAll('input[name="services[]"]:checked');
+                if (checkedServices.length === 0) {
+                    serviceCheckboxes[0].setCustomValidity('Please select at least one service');
+                } else {
+                    serviceCheckboxes.forEach(cb => cb.setCustomValidity(''));
+                }
+            }
+
+            serviceCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', validateServices);
+            });
+
+            // Phone number formatting
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.startsWith('254')) {
+                    value = '+' + value;
+                } else if (value.startsWith('0')) {
+                    value = '+254' + value.substring(1);
+                } else if (value.length > 0 && !value.startsWith('+')) {
+                    value = '+254' + value;
+                }
+                e.target.value = value;
+            });
+        });
+
+        // Prevent horizontal scroll
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+</body>
+</html>

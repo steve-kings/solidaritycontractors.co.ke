@@ -1,0 +1,3452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaping Services - Solidarity Building & Landscape Contractors Ltd</title>
+    <meta name="description" content="Professional landscaping and garden design services in Nyeri. From plant nursery to landscape maintenance - Catherine Landscapers Gardens.">
+    <meta name="keywords" content="landscaping Nyeri, garden design Kenya, plant nursery Karatina, landscape maintenance, irrigation systems">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #DC2626;
+            --accent-color: #FFFFFF;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            background: white;
+        }
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Top Header - Made smaller */
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Main Navigation with click-based dropdown */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        /* Navigation item with dropdown structure */
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .main-nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link.active::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        /* Click-based dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: 
+                linear-gradient(135deg, rgba(76, 175, 80, 0.9) 0%, rgba(34, 197, 94, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 90%;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .breadcrumb-nav {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        /* Enhanced scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(80px) scale(0.9);
+            transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-100px) rotate(-10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(100px) rotate(10deg);
+            transition: all 1.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+
+        .scroll-reveal-up {
+            opacity: 0;
+            transform: translateY(100px) scale(0.8);
+            transition: all 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .scroll-reveal-up.revealed {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-reveal-zoom {
+            opacity: 0;
+            transform: scale(0.3) rotate(45deg);
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .scroll-reveal-zoom.revealed {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .stagger-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .stagger-animation.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .bounce-in.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .fade-slide {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .fade-slide.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Creative Service Cards */
+        .creative-service-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .creative-service-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: var(--shadow-large);
+        }
+
+        .service-image-container {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .creative-service-card:hover .service-image {
+            transform: scale(1.15) rotate(3deg);
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.85), rgba(34, 197, 94, 0.75));
+            opacity: 0;
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .creative-service-card:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-icon-floating {
+            background: white;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            box-shadow: var(--shadow-large);
+            transform: scale(0) rotate(-180deg);
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .creative-service-card:hover .service-icon-floating {
+            transform: scale(1) rotate(0deg);
+        }
+
+        .service-content {
+            padding: 35px;
+        }
+
+        .service-content h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 18px;
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .service-features-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 18px;
+            background: var(--light-color);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .feature-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(15px) scale(1.02);
+            border-color: var(--primary-color);
+        }
+
+        .feature-item i {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            width: 30px;
+            transition: all 0.4s ease;
+        }
+
+        .feature-item:hover i {
+            color: white;
+            transform: rotate(10deg);
+        }
+
+        .btn-creative-service {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-creative-service::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.25);
+            border-radius: 50%;
+            transition: all 0.8s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-creative-service:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .btn-creative-service:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow-large);
+            color: white;
+        }
+
+        /* Enhanced Interactive Image Section */
+        .interactive-image-section {
+            padding: 120px 0;
+            background: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 25px;
+            box-shadow: var(--shadow-large);
+            transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.2) rotate(5deg);
+            opacity: 1;
+            z-index: 25;
+            box-shadow: 0 35px 70px -15px rgba(0,0,0,0.4);
+        }
+
+        .floating-image.img-1 {
+            top: 8%;
+            left: 3%;
+            width: 240px;
+            height: 180px;
+            background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .floating-image.img-2 {
+            top: 25%;
+            right: 5%;
+            width: 220px;
+            height: 220px;
+            background: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 10s ease-in-out infinite 2.5s;
+            border-radius: 50%;
+        }
+
+        .floating-image.img-3 {
+            bottom: 12%;
+            left: 6%;
+            width: 200px;
+            height: 160px;
+            background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 10s ease-in-out infinite 5s;
+        }
+
+        .floating-image.img-4 {
+            top: 55%;
+            right: 20%;
+            width: 180px;
+            height: 140px;
+            background: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            animation: float 10s ease-in-out infinite 7.5s;
+            transform: rotate(-8deg);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(2deg); }
+            50% { transform: translateY(-35px) rotate(-1deg); }
+            75% { transform: translateY(-15px) rotate(1deg); }
+        }
+
+        .interactive-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            max-width: 75%;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.97);
+            padding: 70px 50px;
+            border-radius: 35px;
+            box-shadow: var(--shadow-large);
+            backdrop-filter: blur(15px);
+        }
+
+        .interactive-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .stat-item:hover::before {
+            left: 100%;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        /* Rest of existing styles remain the same... */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Product Catalogue Section Enhanced */
+        .product-catalogue {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .catalogue-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .catalogue-header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .catalogue-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .catalogue-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        /* Enhanced Swiper Styles */
+        .product-swiper {
+            width: 100%;
+            padding: 20px 0 80px 0;
+        }
+
+        .product-slide {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .product-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+
+        .product-slide:hover::before {
+            opacity: 0.05;
+        }
+
+        .product-slide:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: var(--shadow-large);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: var(--shadow-medium);
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .product-info {
+            padding: 30px 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-category {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp-order {
+            background: #25D366;
+            color: white;
+            padding: 14px 22px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            flex: 1;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-whatsapp-order::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-whatsapp-order:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-whatsapp-order:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .btn-view-details {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 14px 22px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            flex: 1;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-view-details::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-view-details:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-view-details:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        /* Enhanced Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--primary-color);
+            background: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-large);
+            margin-top: -30px;
+            transition: all 0.4s ease;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            transform: scale(1.15);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--primary-color);
+            opacity: 0.3;
+            width: 18px;
+            height: 18px;
+            transition: all 0.4s ease;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.4);
+        }
+
+        /* Explore More Section */
+        .explore-more-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-more-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .explore-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .explore-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .explore-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .btn-explore-shop {
+            background: white;
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 35px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-large);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-explore-shop:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 30px 40px -10px rgba(0,0,0,0.3);
+            color: var(--primary-color);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.4s ease;
+            position: relative;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-large);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(76, 175, 80, 0.8) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info h4 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .gallery-info p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-landscape {
+            padding: 80px 0;
+            background: var(--gradient-secondary);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-landscape::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+
+        .cta-text-large {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--secondary-color);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: var(--secondary-color);
+        }
+
+        .btn-cta-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-cta-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer p, .footer li {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) translateY(-3px);
+            color: white;
+        }
+
+        /* Enhanced AI Agent Widget (keeping existing styles) */
+        .ai-agent-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 420px;
+            max-width: 90vw;
+            max-height: 600px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: var(--shadow-large);
+            z-index: 1500;
+            opacity: 0;
+            transform: translateX(100%) scale(0.8);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 3px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ai-agent-widget.active {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .ai-widget-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 20px;
+            border-radius: 22px 22px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .ai-avatar {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .ai-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .ai-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .ai-close-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .ai-close-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
+        }
+
+        .ai-widget-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            animation: messageSlideIn 0.3s ease;
+        }
+
+        @keyframes messageSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.ai {
+            background: var(--light-color);
+            color: var(--text-dark);
+            align-self: flex-start;
+            border-bottom-left-radius: 6px;
+        }
+
+        .message.user {
+            background: var(--gradient-primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 6px;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: var(--light-color);
+            border-radius: 18px;
+            border-bottom-left-radius: 6px;
+            align-self: flex-start;
+            max-width: 85%;
+        }
+
+        .typing-indicator.active {
+            display: block;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: typing 1.4s ease-in-out infinite;
+        }
+
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            30% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+
+        .chat-input-container {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border-color);
+            background: white;
+            border-radius: 0 0 22px 22px;
+            flex-shrink: 0;
+        }
+
+        .chat-input-group {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            resize: none;
+            min-height: 44px;
+            max-height: 100px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .send-btn {
+            background: var(--gradient-primary);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+
+        .quick-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .suggestion-btn {
+            background: var(--light-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .suggestion-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .plant-card {
+            background: var(--light-color);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .plant-card:hover {
+            background: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .plant-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .plant-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .plant-names h5 {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        .plant-names p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .plant-benefits {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .plant-order-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .plant-order-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .contact-card h5 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            margin: 0 0 15px 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-btn:hover {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .ai-trigger-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 100px;
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-large);
+            transition: all 0.4s ease;
+            z-index: 1400;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .ai-trigger-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 25px 50px -10px rgba(0,0,0,0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .page-header {
+                padding: 60px 0 40px;
+                min-height: 50vh;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .catalogue-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .floating-image {
+                display: none;
+            }
+
+            .interactive-content {
+                max-width: 95%;
+                padding: 40px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-title-large {
+                font-size: 2.2rem;
+            }
+
+            .explore-title {
+                font-size: 2rem;
+            }
+
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .service-features-visual {
+                gap: 12px;
+            }
+
+            .feature-item {
+                padding: 10px 15px;
+            }
+
+            .ai-agent-widget {
+                width: 350px;
+                bottom: 80px;
+                right: 10px;
+                max-height: 500px;
+            }
+
+            .ai-trigger-btn {
+                right: 80px;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .catalogue-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .mobile-sidebar {
+                width: 250px;
+            }
+
+            .creative-service-card {
+                margin-bottom: 30px;
+            }
+
+            .service-content {
+                padding: 25px 20px;
+            }
+
+            .interactive-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .ai-agent-widget {
+                width: 300px;
+                max-height: 450px;
+            }
+
+            .chat-container {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header - Made smaller -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation with Click-based Dropdown -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">SBLC
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="buildingmaterial.html">Building Materials</a></li>
+                            <li><a href="construction.html">Construction</a></li>
+                            <li><a href="equipment hire.html">Equipment Hire</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="landscaping.html" class="active">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">SBLC</h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about us.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="buildingmaterial.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title scroll-reveal-zoom">Landscaping & Garden Design</h1>
+                <p class="page-subtitle scroll-reveal-up">Transform your outdoor spaces into stunning gardens and landscapes with our professional design and maintenance services. From plant nursery to complete landscape solutions.</p>
+                <nav class="breadcrumb-nav fade-slide">
+                    <a href="index.html">Home</a> / <a href="services.html">Services</a> / <span>Landscaping</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Landscape Services Section -->
+    <section class="landscape-services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title scroll-reveal">Complete Landscaping Solutions</h2>
+                <p class="section-subtitle scroll-reveal">From garden design to plant nursery, we provide comprehensive landscaping services that enhance your property's beauty and value</p>
+            </div>
+            
+            <!-- Creative Service Cards with Images -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="creative-service-card scroll-reveal-left">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Garden Design" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-floating">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Garden Design & Installation</h3>
+                            <p>Professional garden design services that transform your outdoor space into a beautiful, functional landscape that reflects your style and meets your needs.</p>
+                            <div class="service-features-visual">
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-drafting-compass"></i>
+                                    <span>Custom Garden Design</span>
+                                </div>
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-cube"></i>
+                                    <span>3D Landscape Visualization</span>
+                                </div>
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>Plant Selection & Placement</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="btn-creative-service">
+                                <span>Start Your Design</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="creative-service-card scroll-reveal-right">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Plant Nursery" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-floating">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Plant Nursery & Sales</h3>
+                            <p>Extensive collection of high-quality plants, flowers, trees, and gardening supplies. From exotic species to native plants that thrive in the Nyeri climate.</p>
+                            <div class="service-features-visual">
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-rose"></i>
+                                    <span>Flowering Plants & Roses</span>
+                                </div>
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-apple-alt"></i>
+                                    <span>Fruit Trees & Vegetables</span>
+                                </div>
+                                <div class="feature-item stagger-animation">
+                                    <i class="fas fa-tree"></i>
+                                    <span>Indigenous Trees</span>
+                                </div>
+                            </div>
+                            <a href="#catalogue" class="btn-creative-service">
+                                <span>Browse Plants</span>
+                                <i class="fas fa-leaf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Interactive Image Section -->
+    <section class="interactive-image-section">
+        <div class="floating-image img-1"></div>
+        <div class="floating-image img-2"></div>
+        <div class="floating-image img-3"></div>
+        <div class="floating-image img-4"></div>
+        
+        <div class="container">
+            <div class="interactive-content scroll-reveal">
+                <h2 class="section-title">Creating Beautiful Outdoor Spaces</h2>
+                <p class="section-subtitle">
+                    With over 11 years of experience in landscaping and garden design, we transform ordinary spaces into extraordinary outdoor environments. Our team combines creativity with horticultural expertise to create landscapes that are both beautiful and sustainable.
+                </p>
+                <div class="interactive-stats">
+                    <div class="stat-item bounce-in">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item bounce-in">
+                        <span class="stat-number">11+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item bounce-in">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Plant Varieties</span>
+                    </div>
+                    <div class="stat-item bounce-in">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Product Catalogue Section -->
+    <section class="product-catalogue" id="catalogue">
+        <div class="container">
+            <div class="catalogue-header">
+                <h2 class="scroll-reveal">Plant & Garden Catalogue</h2>
+                <p class="scroll-reveal">Discover our extensive collection of premium plants, flowers, and garden accessories. Order directly through WhatsApp for convenient delivery.</p>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="swiper product-swiper scroll-reveal">
+                <div class="swiper-wrapper">
+                    <!-- Product 1 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Popular</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Flowering Plants</div>
+                                <h3 class="product-title">Premium Rose Collection</h3>
+                                <p class="product-description">Beautiful hybrid tea roses in various colors. Perfect for gardens and landscaping projects. Disease-resistant varieties.</p>
+                                <div class="product-price">KSH 500 - 1,500</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20the%20Premium%20Rose%20Collection.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">New</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Fruit Trees</div>
+                                <h3 class="product-title">Avocado Trees</h3>
+                                <p class="product-description">High-yielding avocado varieties perfect for Nyeri climate. Grafted trees for faster fruiting and better quality.</p>
+                                <div class="product-price">KSH 800 - 2,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Avocado%20Trees.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Best Seller</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Ornamental Plants</div>
+                                <h3 class="product-title">Bougainvillea Collection</h3>
+                                <p class="product-description">Vibrant flowering shrubs perfect for hedging and decorative purposes. Multiple color varieties available.</p>
+                                <div class="product-price">KSH 300 - 800</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20the%20Bougainvillea%20Collection.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Premium</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Indigenous Trees</div>
+                                <h3 class="product-title">Native Tree Species</h3>
+                                <p class="product-description">Mukwa, Meru Oak, and other indigenous trees. Environmentally friendly and well-adapted to local conditions.</p>
+                                <div class="product-price">KSH 200 - 1,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Native%20Tree%20Species.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Seasonal</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Vegetables</div>
+                                <h3 class="product-title">Organic Vegetable Seedlings</h3>
+                                <p class="product-description">Fresh organic vegetable seedlings including tomatoes, kales, spinach, and other kitchen garden essentials.</p>
+                                <div class="product-price">KSH 50 - 200</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20Organic%20Vegetable%20Seedlings.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="swiper-slide">
+                        <div class="product-slide">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                                <div class="product-badge">Special</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Garden Supplies</div>
+                                <h3 class="product-title">Garden Tool Kit</h3>
+                                <p class="product-description">Complete gardening tool set including spades, pruning shears, watering cans, and other essential gardening equipment.</p>
+                                <div class="product-price">KSH 2,500 - 5,000</div>
+                                <div class="product-actions">
+                                    <a href="https://wa.me/254794894910?text=Hi%2C%20I%27m%20interested%20in%20the%20Garden%20Tool%20Kit.%20Please%20provide%20more%20details%20and%20pricing." class="btn-whatsapp-order" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>Order Now
+                                    </a>
+                                    <a href="#" class="btn-view-details">
+                                        <i class="fas fa-eye"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Section -->
+    <section class="explore-more-section">
+        <div class="container">
+            <div class="explore-content">
+                <h2 class="explore-title scroll-reveal">Discover Our Complete Collection</h2>
+                <p class="explore-subtitle scroll-reveal">
+                    Visit our online shop to browse our full range of plants, garden supplies, and landscaping materials. Find everything you need to create your dream garden.
+                </p>
+                <a href="shop.html" class="btn-explore-shop scroll-reveal">
+                    <i class="fas fa-store"></i>
+                    Explore More Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title scroll-reveal">Our Landscaping Projects</h2>
+                <p class="section-subtitle scroll-reveal">See how we've transformed outdoor spaces across Nyeri and beyond</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Residential Garden Design</h4>
+                            <p>Complete landscape transformation with native plants and modern irrigation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Commercial Landscaping</h4>
+                            <p>Office complex beautification with sustainable plant selections</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Garden Maintenance</h4>
+                            <p>Ongoing care and seasonal updates for established landscapes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Plant Nursery</h4>
+                            <p>Wide variety of healthy plants and trees for all landscaping needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-landscape" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title-large scroll-reveal">Ready to Transform Your Landscape?</h2>
+                <p class="cta-text-large scroll-reveal">
+                    Get a free consultation and quote for your landscaping project. Our expert team will help you create the perfect outdoor space that enhances your property's beauty and value.
+                </p>
+                <div class="cta-buttons scroll-reveal">
+                    <a href="tel:+254794894910" class="btn-cta-primary">
+                        <i class="fas fa-phone"></i>
+                        Call +254 794 894 910
+                    </a>
+                    <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20landscaping%20services.%20Please%20provide%20more%20information%20and%20a%20free%20consultation." class="btn-cta-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <p>Professional landscaping and garden design services in Nyeri. Creating beautiful outdoor spaces that enhance your property's value and your quality of life.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Landscaping Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#catalogue">Garden Design</a></li>
+                        <li><a href="#catalogue">Plant Nursery</a></li>
+                        <li><a href="#catalogue">Irrigation Systems</a></li>
+                        <li><a href="#catalogue">Garden Maintenance</a></li>
+                        <li><a href="shop.html">Garden Supplies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Branch: Nyeri-Karatina Road</p>
+                    <p><i class="fas fa-phone me-2"></i>+254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>solidaritybuildingcontractors@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon-Sat: 7:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Website by <a href="https://kingscreationagency.co.ke" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hello%2C%20I%27m%20interested%20in%20your%20landscaping%20services.%20Please%20provide%20more%20information." class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Enhanced AI Agent Widget -->
+    <button class="ai-trigger-btn" onclick="toggleAIWidget()">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <div class="ai-agent-widget" id="aiWidget">
+        <div class="ai-widget-header">
+            <div style="display: flex; align-items: center;">
+                <div class="ai-avatar">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="ai-info">
+                    <h4>Catherine Landscapers AI</h4>
+                    <p>Your plant & landscaping expert</p>
+                </div>
+            </div>
+            <button class="ai-close-btn" onclick="closeAIWidget()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="ai-widget-body">
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <div class="quick-suggestions" id="quickSuggestions">
+                    <button class="suggestion-btn" onclick="sendQuickMessage('What flowers do you have?')">🌸 Flowers</button>
+                    <button class="suggestion-btn" onclick="sendQuickMessage('Show me fruit trees')">🌳 Fruit Trees</button>
+                    <button class="suggestion-btn" onclick="sendQuickMessage('Garden design help')">🎨 Garden Design</button>
+                </div>
+                <div class="chat-input-group">
+                    <textarea class="chat-input" id="chatInput" placeholder="Ask about plants, flowers, trees..." rows="1"></textarea>
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Plant Database (keeping existing functionality)
+        const plantDatabase = [
+            {
+                id: 1,
+                englishName: "Red Rose",
+                kiswahiliName: "Waridi Nyekundu",
+                category: "flowers",
+                icon: "fas fa-rose",
+                benefits: "Perfect for romance gardens, attracts bees, air purification, natural fragrance",
+                whatsappMessage: "Hi, I'm interested in Red Roses (Waridi Nyekundu). Please provide pricing and availability.",
+                keywords: ["rose", "waridi", "red", "flower", "romantic", "fragrance"]
+            },
+            {
+                id: 2,
+                englishName: "Avocado Tree",
+                kiswahiliName: "Mti wa Parachichi",
+                category: "trees",
+                icon: "fas fa-apple-alt",
+                benefits: "Nutritious fruits, shade provider, carbon sequestration, increases property value",
+                whatsappMessage: "Hi, I'm interested in Avocado Trees (Mti wa Parachichi). Please provide pricing and planting guidance.",
+                keywords: ["avocado", "parachichi", "fruit", "tree", "shade", "nutrition"]
+            },
+            {
+                id: 3,
+                englishName: "Bougainvillea",
+                kiswahiliName: "Mzambarao",
+                category: "flowers",
+                icon: "fas fa-leaf",
+                benefits: "Colorful blooms, low maintenance, drought resistant, perfect for hedging",
+                whatsappMessage: "Hi, I'm interested in Bougainvillea (Mzambarao). Please provide color options and pricing.",
+                keywords: ["bougainvillea", "mzambarao", "hedge", "colorful", "drought", "low maintenance"]
+            },
+            {
+                id: 4,
+                englishName: "Eucalyptus Tree",
+                kiswahiliName: "Mti wa Kalafuu",
+                category: "trees",
+                icon: "fas fa-tree",
+                benefits: "Fast growing, medicinal properties, natural insect repellent, timber production",
+                whatsappMessage: "Hi, I'm interested in Eucalyptus Trees (Mti wa Kalafuu). Please provide variety options and pricing.",
+                keywords: ["eucalyptus", "kalafuu", "fast growing", "medicinal", "insect repellent", "timber"]
+            },
+            {
+                id: 5,
+                englishName: "Marigold",
+                kiswahiliName: "Maua ya Dhahabu",
+                category: "flowers",
+                icon: "fas fa-sun",
+                benefits: "Pest control, companion planting, bright colors, easy to grow",
+                whatsappMessage: "Hi, I'm interested in Marigolds (Maua ya Dhahabu). Please provide seed and plant options.",
+                keywords: ["marigold", "dhahabu", "pest control", "companion", "bright", "easy"]
+            },
+            {
+                id: 6,
+                englishName: "Mango Tree",
+                kiswahiliName: "Mti wa Embe",
+                category: "trees",
+                icon: "fas fa-apple-alt",
+                benefits: "Delicious fruits, shade provider, long-lived, increases property value",
+                whatsappMessage: "Hi, I'm interested in Mango Trees (Mti wa Embe). Please provide variety options and grafted tree availability.",
+                keywords: ["mango", "embe", "fruit", "delicious", "shade", "long lived"]
+            },
+            {
+                id: 7,
+                englishName: "Hibiscus",
+                kiswahiliName: "Maua ya Kijani",
+                category: "flowers",
+                icon: "fas fa-flower",
+                benefits: "Large colorful blooms, attracts butterflies, medicinal uses, year-round flowering",
+                whatsappMessage: "Hi, I'm interested in Hibiscus plants (Maua ya Kijani). Please provide color varieties and care instructions.",
+                keywords: ["hibiscus", "kijani", "colorful", "butterflies", "medicinal", "year round"]
+            },
+            {
+                id: 8,
+                englishName: "Cedar Tree",
+                kiswahiliName: "Mti wa Mkangazi",
+                category: "trees",
+                icon: "fas fa-tree",
+                benefits: "Durable timber, erosion control, wildlife habitat, aromatic wood",
+                whatsappMessage: "Hi, I'm interested in Cedar Trees (Mti wa Mkangazi). Please provide size options and planting requirements.",
+                keywords: ["cedar", "mkangazi", "timber", "erosion", "wildlife", "aromatic"]
+            },
+            {
+                id: 9,
+                englishName: "Sunflower",
+                kiswahiliName: "Maua ya Alizeti",
+                category: "flowers",
+                icon: "fas fa-sun",
+                benefits: "Oil production, bird food, soil improvement, cheerful appearance",
+                whatsappMessage: "Hi, I'm interested in Sunflowers (Maua ya Alizeti). Please provide seed varieties and planting guidance.",
+                keywords: ["sunflower", "alizeti", "oil", "bird food", "soil", "cheerful"]
+            },
+            {
+                id: 10,
+                englishName: "Jacaranda Tree",
+                kiswahiliName: "Mti wa Jakaranda",
+                category: "trees",
+                icon: "fas fa-tree",
+                benefits: "Beautiful purple flowers, shade provider, ornamental value, drought tolerant",
+                whatsappMessage: "Hi, I'm interested in Jacaranda Trees (Mti wa Jakaranda). Please provide size options and flowering timeline.",
+                keywords: ["jacaranda", "jakaranda", "purple", "flowers", "ornamental", "drought"]
+            }
+        ];
+
+        // Chat functionality (keeping existing)
+        let chatHistory = [];
+        let isAIWidgetOpen = false;
+        let aiWidgetTimer;
+
+        // Contact information for Catherine Landscapers
+        const catherineContact = {
+            name: "Catherine Landscapers",
+            company: "Solidarity Building & Landscape Contractors Ltd",
+            phone: "+254 794 894 910",
+            whatsapp: "+254794894910",
+            email: "solidaritybuildingcontractors@gmail.com",
+            location: "Nyeri-Nairobi Highway, Skuta"
+        };
+
+        // Fixed Click-based dropdown toggle
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+
+        // Mobile dropdown toggle function
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        // AI Widget Functions (keeping existing)
+        function toggleAIWidget() {
+            if (isAIWidgetOpen) {
+                closeAIWidget();
+            } else {
+                openAIWidget();
+            }
+        }
+
+        function openAIWidget() {
+            const widget = document.getElementById('aiWidget');
+            widget.classList.add('active');
+            isAIWidgetOpen = true;
+            
+            // Initialize chat if first time opening
+            if (chatHistory.length === 0) {
+                initializeChat();
+            }
+            
+            // Auto-close after 30 seconds
+            aiWidgetTimer = setTimeout(() => {
+                closeAIWidget();
+            }, 30000);
+        }
+
+        function closeAIWidget() {
+            const widget = document.getElementById('aiWidget');
+            widget.classList.remove('active');
+            isAIWidgetOpen = false;
+            if (aiWidgetTimer) {
+                clearTimeout(aiWidgetTimer);
+            }
+        }
+
+        function initializeChat() {
+            const welcomeMessage = "Hello! 👋 I'm Catherine, your landscaping expert from Solidarity Building & Landscape Contractors Ltd. I can help you find the perfect plants, flowers, and trees for your garden. What are you looking for today?";
+            addMessage(welcomeMessage, 'ai');
+            chatHistory.push({role: 'ai', message: welcomeMessage});
+        }
+
+        function addMessage(message, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.innerHTML = message;
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTyping() {
+            document.getElementById('typingIndicator').classList.add('active');
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function hideTyping() {
+            document.getElementById('typingIndicator').classList.remove('active');
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            // Add user message
+            addMessage(message, 'user');
+            chatHistory.push({role: 'user', message: message});
+            
+            // Clear input
+            input.value = '';
+            
+            // Hide suggestions after first message
+            const suggestions = document.getElementById('quickSuggestions');
+            if (chatHistory.filter(m => m.role === 'user').length > 1) {
+                suggestions.style.display = 'none';
+            }
+            
+            // Process AI response
+            processAIResponse(message);
+        }
+
+        function sendQuickMessage(message) {
+            const input = document.getElementById('chatInput');
+            input.value = message;
+            sendMessage();
+        }
+
+        function processAIResponse(userMessage) {
+            showTyping();
+            
+            // Simulate thinking time
+            setTimeout(() => {
+                hideTyping();
+                const response = generateAIResponse(userMessage);
+                addMessage(response, 'ai');
+                chatHistory.push({role: 'ai', message: response});
+                
+                // Reset auto-close timer
+                if (aiWidgetTimer) {
+                    clearTimeout(aiWidgetTimer);
+                    aiWidgetTimer = setTimeout(() => {
+                        closeAIWidget();
+                    }, 30000);
+                }
+            }, 1000 + Math.random() * 1000);
+        }
+
+        function generateAIResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+            
+            // Search for plants in database
+            const foundPlants = searchPlants(message);
+            
+            if (foundPlants.length > 0) {
+                if (foundPlants.length === 1) {
+                    return createSinglePlantResponse(foundPlants[0]);
+                } else {
+                    return createMultiplePlantsResponse(foundPlants);
+                }
+            }
+            
+            // Handle general inquiries
+            if (containsKeywords(message, ['help', 'what can you do', 'services', 'what do you offer'])) {
+                return `I can help you with:
+                🌸 Finding flowers and plants
+                🌳 Selecting fruit trees
+                🌿 Garden design advice
+                🌱 Plant care guidance
+                💧 Irrigation systems
+                🏡 Landscaping services
+                
+                What specific plants or services are you interested in?`;
+            }
+            
+            if (containsKeywords(message, ['garden design', 'landscape design', 'design help', 'planning'])) {
+                return `I'd love to help with your garden design! 🎨 
+                
+                We offer professional landscape design services including:
+                • Custom garden layouts
+                • 3D visualizations
+                • Plant selection and placement
+                • Irrigation system design
+                • Seasonal planning
+                
+                Would you like to discuss your specific garden vision or see our available plants?`;
+            }
+            
+            if (containsKeywords(message, ['price', 'cost', 'pricing', 'how much'])) {
+                return `Our pricing varies based on plant type and size:
+                
+                🌸 Flowers: KSH 50 - 800
+                🌳 Fruit Trees: KSH 200 - 2,000
+                🌿 Ornamental Plants: KSH 100 - 1,500
+                🌱 Seedlings: KSH 50 - 200
+                
+                For specific pricing and availability, I can connect you directly with Catherine. What plants are you interested in?`;
+            }
+            
+            if (containsKeywords(message, ['location', 'where', 'address', 'visit'])) {
+                return `You can find us at:
+                📍 Head Office: Nyeri-Nairobi Highway, Skuta
+                📍 Branch: Nyeri-Karatina Road
+                
+                We're open Monday-Saturday, 7:00 AM - 6:00 PM
+                
+                Would you like directions or prefer to discuss your plant needs first?`;
+            }
+            
+            // If no specific match found, offer to connect with Catherine
+            return createContactResponse();
+        }
+
+        function searchPlants(query) {
+            return plantDatabase.filter(plant => {
+                const searchText = query.toLowerCase();
+                return plant.keywords.some(keyword => searchText.includes(keyword)) ||
+                       plant.englishName.toLowerCase().includes(searchText) ||
+                       plant.kiswahiliName.toLowerCase().includes(searchText) ||
+                       plant.category.toLowerCase().includes(searchText);
+            });
+        }
+
+        function containsKeywords(text, keywords) {
+            return keywords.some(keyword => text.includes(keyword));
+        }
+
+        function createSinglePlantResponse(plant) {
+            return `
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">
+                            <i class="${plant.icon}"></i>
+                        </div>
+                        <div class="plant-names">
+                            <h5>${plant.englishName}</h5>
+                            <p>${plant.kiswahiliName}</p>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">${plant.benefits}</div>
+                    <button class="plant-order-btn" onclick="orderPlant('${plant.whatsappMessage}')">
+                        <i class="fab fa-whatsapp"></i>
+                        Order via WhatsApp
+                    </button>
+                </div>
+                
+                Would you like to know about any other plants or need help with garden planning?
+            `;
+        }
+
+        function createMultiplePlantsResponse(plants) {
+            let response = `Great! I found ${plants.length} options for you:\n\n`;
+            
+            plants.slice(0, 3).forEach(plant => {
+                response += `🌿 **${plant.englishName}** (${plant.kiswahiliName})\n   ${plant.benefits}\n\n`;
+            });
+            
+            if (plants.length > 3) {
+                response += `...and ${plants.length - 3} more options!\n\n`;
+            }
+            
+            response += `Which one interests you most? I can provide more details and help you place an order!`;
+            
+            return response;
+        }
+
+        function createContactResponse() {
+            return `
+                <div class="contact-card">
+                    <h5>Let me connect you with Catherine! 🌸</h5>
+                    <p>I don't have specific information about that, but Catherine from our landscaping team will be happy to help you personally.</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/${catherineContact.whatsapp}?text=Hi Catherine, I need help with landscaping. The AI assistant referred me to you." class="contact-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp Catherine
+                        </a>
+                        <a href="tel:${catherineContact.phone}" class="contact-btn">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                Catherine specializes in:
+                • Custom garden designs
+                • Plant recommendations
+                • Landscaping solutions
+                • Irrigation systems
+                • Ongoing maintenance
+                
+                Is there anything else I can help you with in the meantime?
+            `;
+        }
+
+        function orderPlant(message) {
+            const whatsappURL = `https://wa.me/${catherineContact.whatsapp}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Input handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatInput = document.getElementById('chatInput');
+            const sendBtn = document.getElementById('sendBtn');
+            
+            if (chatInput && sendBtn) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        sendMessage();
+                    }
+                });
+                
+                chatInput.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+                    
+                    sendBtn.disabled = this.value.trim() === '';
+                });
+            }
+        });
+
+        // Auto-show AI widget after 5 seconds on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                if (!isAIWidgetOpen) {
+                    openAIWidget();
+                }
+            }, 5000);
+        });
+
+        // Initialize Swiper with enhanced settings
+        const productSwiper = new Swiper('.product-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 1000,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        // Enhanced scroll animations using Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add staggered animation delays
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                        
+                        // Special handling for staggered feature items
+                        if (entry.target.classList.contains('service-features-visual')) {
+                            const features = entry.target.querySelectorAll('.stagger-animation');
+                            features.forEach((feature, featureIndex) => {
+                                setTimeout(() => {
+                                    feature.classList.add('revealed');
+                                }, featureIndex * 200);
+                            });
+                        }
+                        
+                        // Special handling for gallery items
+                        if (entry.target.classList.contains('gallery-grid')) {
+                            const items = entry.target.querySelectorAll('.gallery-item');
+                            items.forEach((item, itemIndex) => {
+                                setTimeout(() => {
+                                    item.style.animation = `fadeInUp 0.8s ease forwards`;
+                                    item.style.animationDelay = `${itemIndex * 0.2}s`;
+                                }, 100);
+                            });
+                        }
+                        
+                        // Special handling for stats
+                        if (entry.target.classList.contains('interactive-stats')) {
+                            const stats = entry.target.querySelectorAll('.stat-item');
+                            stats.forEach((stat, statIndex) => {
+                                setTimeout(() => {
+                                    stat.classList.add('revealed');
+                                    // Animate numbers
+                                    const numberElement = stat.querySelector('.stat-number');
+                                    if (numberElement) {
+                                        animateNumber(numberElement);
+                                    }
+                                }, statIndex * 150);
+                            });
+                        }
+                        
+                    }, index * 100);
+                    
+                    // Unobserve after animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-up, .scroll-reveal-zoom, .stagger-animation, .bounce-in, .fade-slide, .service-features-visual, .interactive-stats, .gallery-grid').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Number animation function
+        function animateNumber(element) {
+            const target = parseInt(element.textContent.replace(/\D/g, ''));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (element.textContent.includes('+')) {
+                    element.textContent = Math.floor(current) + '+';
+                } else if (element.textContent.includes('%')) {
+                    element.textContent = Math.floor(current) + '%';
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Enhanced floating images interaction
+        document.querySelectorAll('.floating-image').forEach((img, index) => {
+            img.addEventListener('click', function() {
+                this.style.transform = `scale(1.4) rotate(${index % 2 === 0 ? '8deg' : '-8deg'})`;
+                this.style.zIndex = '35';
+                this.style.filter = 'brightness(1.2) saturate(1.3)';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                    this.style.zIndex = '1';
+                    this.style.filter = 'brightness(1) saturate(1)';
+                }, 2500);
+            });
+            
+            img.addEventListener('mouseenter', function() {
+                this.style.transform = `scale(1.25) rotate(${index % 2 === 0 ? '6deg' : '-6deg'})`;
+                this.style.zIndex = '30';
+                this.style.filter = 'brightness(1.15) saturate(1.2)';
+            });
+            
+            img.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+                this.style.zIndex = '1';
+                this.style.filter = 'brightness(1) saturate(1)';
+            });
+        });
+
+        // Enhanced parallax effects
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            
+            // Floating images parallax
+            document.querySelectorAll('.floating-image').forEach((img, index) => {
+                const speed = 0.1 + (index * 0.02);
+                const yPos = -(scrollTop * speed);
+                const rotation = Math.sin(scrollTop * 0.001 + index) * 3;
+                img.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+            });
+            
+            // Background parallax for sections
+            const parallaxElements = document.querySelectorAll('.page-header, .explore-more-section, .cta-landscape');
+            parallaxElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const speed = 0.5;
+                const yPos = -(rect.top * speed);
+                element.style.backgroundPosition = `center ${yPos}px`;
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced page load animations
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const firstElements = document.querySelectorAll('.page-header-content .scroll-reveal-zoom, .page-header-content .scroll-reveal-up, .page-header-content .fade-slide');
+                firstElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('revealed');
+                    }, index * 300);
+                });
+            }, 200);
+        });
+
+        // Add click event to close dropdowns when clicking on menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateOnScroll() {
+            // Parallax and scroll effects here
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // Add CSS keyframes for fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

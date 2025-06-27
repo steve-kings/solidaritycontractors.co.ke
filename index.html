@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidarity Building & Landscape Contractors Ltd - Building With Love & Passion</title>
+    <meta name="description" content="Your trusted friends in construction, landscaping, and events in Nyeri. We build with love, create beautiful gardens, and make your celebrations special!">
+    <meta name="keywords" content="construction Nyeri, landscaping Kenya, event services, building contractors, tent rental, nursery plants">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: hsl(133, 94%, 30%);
+            --secondary-color: #DC2626;
+            --accent-color: #F97316;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6B7280;
+            --border-color: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #059624 0%, #05961d  100%);
+            --gradient-secondary: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-glow: 0 0 40px rgba(5, 150, 105, 0.15);
+            
+            --hero-image-1: url('/images/african-american-lady-safety-helmet-with-notebook-near-building-construction.jpg');
+            --hero-image-2: url('/images/working-housing-project.jpg');
+            --hero-image-3: url('/images/tent\ 10.jpg');
+            --construction-image: url('/images/african-american-lady-safety-helmet-with-notebook-near-building-construction.jpg');
+            --landscaping-image: url('/images/landscaper\ hero.jpg');
+            --events-image: url('/images/IMG-20250604-WA0022.jpg');
+            --logo-image: url('/sbl\ logo\ 1.jpg');
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-left.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-right.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .top-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4px 0;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .social-header {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-header a {
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            font-size: 10px;
+        }
+
+        .social-header a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-item-with-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .main-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-arrow:hover {
+            color: var(--primary-color);
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .dropdown-arrow i {
+            transition: transform 0.3s ease;
+        }
+
+        .has-dropdown.active .dropdown-arrow i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-large);
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            z-index: 1001;
+        }
+
+        .has-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-menu li a::after {
+            display: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            z-index: 2000;
+            transition: right 0.3s ease;
+            box-shadow: var(--shadow-large);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-sidebar-header h5 {
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-menu li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-dropdown-menu {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-menu li a {
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: none;
+            padding: 8px 0;
+        }
+
+        .mobile-contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .mobile-contact-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            overflow: hidden;
+            padding: 40px 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(5, 150, 105, 0.1);
+            color: var(--primary-color);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 2px solid rgba(5, 150, 105, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .hero-title .highlight {
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .hero-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            
+            border-radius: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 35px;
+            max-width: 550px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary-custom:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+            color: white;
+        }
+
+        .btn-secondary-custom {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-secondary-custom:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            color: white;
+        }
+
+        .hero-slider-container {
+            position: relative;
+            height: 500px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+            background: #f8fafc;
+        }
+
+        .hero-slider {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+            display: flex;
+            align-items: end;
+            padding: 40px;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        .hero-slide-content {
+            background: rgba(0,0,0,0.85);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 450px;
+            transform: translateY(20px);
+            transition: transform 1s ease;
+        }
+
+        .hero-slide.active .hero-slide-content {
+            transform: translateY(0);
+        }
+
+        .hero-slide-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero-slide-content p {
+            margin: 0;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .hero-slide-1 {
+            background-image: var(--hero-image-1);
+        }
+
+        .hero-slide-2 {
+            background-image: var(--hero-image-2);
+        }
+
+        .hero-slide-3 {
+            background-image: var(--hero-image-3);
+        }
+
+        .hero-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            background: rgba(0,0,0,0.4);
+            padding: 12px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.6);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .hero-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .hero-dot.active {
+            background: white;
+            transform: scale(1.3);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(5, 150, 105, 0.4);
+        }
+
+        .hero-dot.active::after {
+            background: var(--primary-color);
+        }
+
+        .hero-dot:hover {
+            background: rgba(255,255,255,0.9);
+            transform: scale(1.1);
+        }
+
+        .content-with-image {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding: 20px 0;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-text {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-title {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .content-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .content-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+            height: 400px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .content-image:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .construction-bg {
+            background-image: var(--construction-image);
+        }
+
+        .landscaping-bg {
+            background-image: var(--landscaping-image);
+        }
+
+        .events-bg {
+            background-image: var(--events-image);
+        }
+
+        .features-section {
+            padding: 80px 0;
+            background: var(--light-color);
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            text-align: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 70px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 25px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: var(--gradient-primary);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .feature-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .feature-btn {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .feature-btn:hover {
+            color: white;
+            background: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .stats-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: white;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.8));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            background: white;
+            position: relative;
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-large);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            animation-delay: 0.5s;
+        }
+
+        .phone-btn {
+            background: var(--secondary-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) translateY(-5px);
+            color: white;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .footer-section h5 {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #94a3b8;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 40px;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 992px) {
+            .content-section.reverse {
+                flex-direction: column;
+            }
+            
+            .content-image {
+                height: 350px;
+                margin-top: 30px;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .top-header {
+                text-align: center;
+                padding: 8px 0;
+            }
+
+            .contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .social-header {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+
+            .hero-slider-container {
+                height: 400px;
+            }
+
+            .stat-number {
+                font-size: 2.8rem;
+            }
+
+            .content-image {
+                height: 280px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                width: 100%;
+                max-width: 320px;
+                text-align: center;
+            }
+
+            .content-text {
+                padding: 20px 15px;
+            }
+
+            .features-section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-slider-container {
+                height: 320px;
+            }
+
+            .hero-slide-content {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .hero-slide-content h3 {
+                font-size: 1.4rem;
+            }
+
+            .hero-slide-content p {
+                font-size: 0.95rem;
+            }
+
+            .content-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <span>
+                            <i class="fas fa-phone"></i>
+                            +254 794 894 910
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            solidaritybuildingcontractors@gmail.com
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nyeri-Nairobi Highway
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-header">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/254794894910" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="sbl logo 1.jpg" alt="SBLC Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/about us.html" class="active">About Us</a></li>
+                    <li class="has-dropdown">
+                        <div class="nav-item-with-dropdown">
+                            <a href="services/services.html" class="main-nav-link">Our Services</a>
+                            <span class="dropdown-arrow" onclick="toggleDropdown(this)">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/buildingmateral.html">Building Materials</a></li>
+                            <li><a href="services/construction.html">Construction</a></li>
+                            <li><a href="services/equipment hire.html">Equipment Hire</a></li>
+                            <li><a href="services/events.html">Events</a></li>
+                            <li><a href="services/landscaping.html">Landscaping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+            <h5><img src="/sbl logo 1.jpg" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;"></h5>
+            <button class="close-btn" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about us.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="/services/services.html" onclick="closeMobileMenu()">Our Services</a></li>
+            <li class="mobile-dropdown">
+                <a href="javascript:void(0)" onclick="toggleMobileDropdown(this)">
+                    Service Categories <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="services/buildingmateral.html" onclick="closeMobileMenu()">Building Materials</a></li>
+                    <li><a href="services/construction.html" onclick="closeMobileMenu()">Construction</a></li>
+                    <li><a href="services/equipment hire.html" onclick="closeMobileMenu()">Equipment Hire</a></li>
+                    <li><a href="services/events.html" onclick="closeMobileMenu()">Events</a></li>
+                    <li><a href="services/landscaping.html" onclick="closeMobileMenu()">Landscaping</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:+254794894910" class="mobile-contact-btn">
+                <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+            <a href="https://wa.me/254794894910" class="mobile-contact-btn whatsapp">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-left">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i class="fas fa-heart"></i>
+                            <span>Your Friends in Building & Landscaping</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Building Dreams <span class="highlight">With Love</span><br>
+                            & Passion
+                        </h1>
+                        <p class="hero-subtitle">
+                            Hey there! We're your friendly neighborhood builders, gardeners, and event helpers in Nyeri. 
+                            We treat every customer like family because you deserve the absolute best.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="contact.html" class="btn-primary-custom">
+                                <i class="fas fa-phone me-2"></i>Let's Start Building
+                            </a>
+                            <a href="about.html" class="btn-secondary-custom">
+                                <i class="fas fa-heart me-2"></i>Meet Our Team
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-4 mt-4 flex-wrap">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-users" style="color: var(--primary-color);"></i>
+                                <span><strong>500+</strong> Happy clients</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-heart" style="color: var(--secondary-color);"></i>
+                                <span><strong>10 Years</strong> of Love & Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate-right">
+                    <div class="hero-slider-container">
+                        <div class="hero-slider">
+                            <div class="hero-slide hero-slide-1 active">
+                                <div class="hero-slide-content">
+                                    <h3>We Build Homes with Heart</h3>
+                                    <p>Every brick, every nail, every detail matters to us. We're building your dreams, not just structures!</p>
+                                </div>
+                            </div>
+                            <div class="hero-slide hero-slide-2">
+                                <div class="hero-slide-content">
+                                    <h3>Gardens That Make You Smile</h3>
+                                    <p>Our Catherine Landscapers Gardens creates outdoor spaces where families love to spend time together</p>
+                                </div>
+                            </div>
+                            <div class="hero-slide hero-slide-3">
+                                <div class="hero-slide-content">
+                                    <h3>Celebrations Made Perfect</h3>
+                                    <p>Your special day deserves special attention. We handle the setup so you can focus on making memories!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-nav">
+                            <div class="hero-dot active" onclick="goToHeroSlide(0)"></div>
+                            <div class="hero-dot" onclick="goToHeroSlide(1)"></div>
+                            <div class="hero-dot" onclick="goToHeroSlide(2)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-with-image">
+        <div class="container">
+            <div class="row align-items-center content-section">
+                <div class="col-lg-6">
+                    <div class="content-text animate-left">
+                        <h2 class="content-title">We Build Homes That Last</h2>
+                        <p class="content-description">
+                            You know what? Building isn't just about putting bricks together. It's about creating spaces where families grow, where memories are made, and where dreams come alive. With over 10 years of experience, we've learned that every home has a story.
+                        </p>
+                        <p class="content-description">
+                            Whether you're building your first home or expanding your business, we're here to guide you every step of the way. We use the best materials and modern techniques because you deserve nothing less than excellence.
+                        </p>
+                        <a href="services/construction.html" class="btn-primary-custom">
+                            <i class="fas fa-home me-2"></i>Explore our Construction Services
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-image construction-bg animate-right"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center content-section reverse">
+                <div class="col-lg-6">
+                    <div class="content-text animate-right">
+                        <h2 class="content-title">Gardens That Bring Joy</h2>
+                        <p class="content-description">
+                            There's something magical about a beautiful garden, isn't there? It's where kids play, where couples have evening chats, and where grandparents share stories. At our Catherine Landscapers Gardens, we grow more than just plants - we cultivate happiness.
+                        </p>
+                        <p class="content-description">
+                            Located just 10km from Nyeri town on the Nyeri-Karatina Road, our nursery is a green paradise. We have indigenous and exotic plants that thrive in our beautiful Kenyan climate. Let's create your own little piece of paradise!
+                        </p>
+                        <a href="services/landscaping.html" class="btn-primary-custom">
+                            <i class="fas fa-seedling me-2"></i>Visit Our Garden Paradise
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-image landscaping-bg animate-left"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center content-section">
+                <div class="col-lg-6">
+                    <div class="content-text animate-left">
+                        <h2 class="content-title">Making Your Celebrations Special</h2>
+                        <p class="content-description">
+                            Every celebration is special - whether it's your daughter's graduation, your son's wedding, or a simple family gathering. We understand that these moments matter, and we want to help make them absolutely perfect.
+                        </p>
+                        <p class="content-description">
+                            From tents and chairs to portable toilets and complete setup, we handle everything with care and attention. You focus on enjoying your special day while we take care of all the details. That's what friends do for each other, right?
+                            we offer Tent hire, chairs and mobile toilet services. WE also deal in Tent sales, explore n our shop page.
+                        </p>
+                        <a href="services/events.html" class="btn-primary-custom">
+                            <i class="fas fa-calendar-heart me-2"></i>Plan Your Special Day
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-image events-bg animate-right"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="features-section">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <h2 class="section-title">What We Love Doing For You</h2>
+                <p class="section-subtitle">We pour our hearts into everything we do. Here's how we can help make your dreams come true with love, passion, and lots of care.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Building Your Dreams</h3>
+                        <p>From cozy family homes to impressive business buildings, we build with love and attention to every detail. Your dream is our mission!</p>
+                        <a href="services/construction.html" class="feature-btn">
+                            Let's Build Together, explore our construction services <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Growing Beautiful Spaces</h3>
+                        <p>Our gardens are where magic happens! We design, plant, and nurture outdoor spaces that bring families together and make hearts happy.</p>
+                        <a href="services/landscaping.html" class="feature-btn">
+                            Grow With Us <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-heart"></i>
+                        </div>
+                        <h3>Celebrating Life's Moments</h3>
+                        <p>Every celebration deserves to be special. We bring the tents, chairs, and all the equipment so you can focus on what matters - celebrating with loved ones!</p>
+                        <a href="services/events.html" class="feature-btn">
+                            Celebrate With Us <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="500">0</span>
+                    <div class="stat-label">Happy clients Served</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="150">0</span>
+                    <div class="stat-label">Beautiful Gardens Created</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="10">0</span>
+                    <div class="stat-label">Years of Love & Service</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="24">0</span>
+                    <div class="stat-label">Hours We're Here For You</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center animate-on-scroll">
+                    <h2 class="section-title">Our Story of Love & Passion</h2>
+                    <p class="section-subtitle">"At Your Service With Lots of Love and Passion"</p>
+                    <p class="lead mb-5">
+                        You know what makes us different? We truly believe that the customer is always right, and we treat each customer as a boss because customer satisfaction is the backbone of a successful business. We have a big heart to face and undertake even the most challenging projects because that's just who we are!
+                    </p>
+                </div>
+            </div>
+            <div class="row text-start mt-5">
+                <div class="col-md-4 animate-on-scroll">
+                    <h4 style="color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-eye me-2"></i>Our Big Dream
+                    </h4>
+                    <p>To be the regional leader that everyone talks about - not just for our work, but for how much we care about our customers and community.</p>
+                </div>
+                <div class="col-md-4 animate-on-scroll">
+                    <h4 style="color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-heart me-2"></i>What Drives Us
+                    </h4>
+                    <p>To exceed your expectations through quality, innovation, and service that makes you feel like family. Your happiness is our success!</p>
+                </div>
+                <div class="col-md-4 animate-on-scroll">
+                    <h4 style="color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-handshake me-2"></i>Our Promise
+                    </h4>
+                    <p>We bring integrity, passion, and excellence to everything we do. No challenge is too big when we're building your dreams together!</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 animate-on-scroll">
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary-custom">Let's Start Your Project</a>
+                    <a href="projects.html" class="btn-secondary-custom">See Our Happy Customers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="/sbl logo 1.jpg" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <p>"At Your Service With Lots of Love and Passion"</p>
+                    <p>Building dreams, growing gardens, and celebrating life with our amazing community in Nyeri!</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>What We Do</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="services/construction.html">Building Homes</a></li>
+                        <li><a href="services/landscaping.html">Garden Design</a></li>
+                        <li><a href="services/events.html">Event Setup</a></li>
+                        <li><a href="shop.html">Plant Nursery</a></li>
+                        <li><a href="services/equipment hire.html">Equipment Hire</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Come Visit Us!</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Head Office: Nyeri-Nairobi Highway, Skuta (opposite Kanyina Flats)</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Catherine Landscapers Gardens: Nyeri-Karatina Road (near Muruguru Girls)</p>
+                    <p><i class="fas fa-phone me-2"></i>Call us: +254 794 894 910 / +254 789 023 782</p>
+                    <p><i class="fas fa-envelope me-2"></i>Email: solidaritybuildingcontractors@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Solidarity Building & Landscape Contractors Ltd. Made with ❤️ in Nyeri</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Develope by <a href="https://wa.me/254788419041" target="_blank" style="color: var(--primary-color);">Kings Creation Agency</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/254794894910?text=Hi%20there!%20I%27d%20love%20to%20chat%20about%20your%20services.%20Can%20we%20talk%3F" class="floating-btn whatsapp-btn" target="_blank" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254794894910" class="floating-btn phone-btn" title="Call us now">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function toggleDropdown(element) {
+            const dropdown = element.closest('.has-dropdown');
+            const allDropdowns = document.querySelectorAll('.has-dropdown');
+            
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            dropdown.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            const isDropdownClick = event.target.closest('.has-dropdown');
+            
+            if (!isDropdownClick) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.mobile-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            document.body.style.overflow = '';
+        }
+
+        function toggleMobileDropdown(element) {
+            const dropdown = element.parentElement;
+            dropdown.classList.toggle('active');
+            
+            const allDropdowns = document.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+        }
+
+        let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        const totalHeroSlides = heroSlides.length;
+        let slideInterval;
+
+        function goToHeroSlide(slideIndex) {
+            heroSlides[currentHeroSlide].classList.remove('active');
+            heroDots[currentHeroSlide].classList.remove('active');
+            
+            currentHeroSlide = slideIndex;
+            
+            heroSlides[currentHeroSlide].classList.add('active');
+            heroDots[currentHeroSlide].classList.add('active');
+        }
+
+        function nextHeroSlide() {
+            const nextSlide = (currentHeroSlide + 1) % totalHeroSlides;
+            goToHeroSlide(nextSlide);
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(nextHeroSlide, 5000);
+        }
+
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        startSlideShow();
+
+        const sliderContainer = document.querySelector('.hero-slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopSlideShow);
+            sliderContainer.addEventListener('mouseleave', startSlideShow);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, parseInt(delay) + (index * 150));
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll, .animate-left, .animate-right, .animate-scale').forEach((el, index) => {
+            const container = el.closest('.row, .stats-grid');
+            if (container) {
+                const siblings = container.querySelectorAll('.animate-on-scroll, .animate-left, .animate-right, .animate-scale');
+                const position = Array.from(siblings).indexOf(el);
+                el.dataset.delay = position * 200;
+            }
+            observer.observe(el);
+        });
+
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            counters.forEach((counter, index) => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000 + (index * 200);
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                setTimeout(() => {
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target + '+';
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current);
+                        }
+                    }, 16);
+                }, index * 300);
+            });
+        }
+
+        const statsSection = document.querySelector('.stats-section');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const heroElements = document.querySelectorAll('.hero-content .animate-left, .hero-slider-container .animate-right');
+                heroElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 300);
+                });
+            }, 200);
+        });
+
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        function preloadImages() {
+            const imageUrls = [
+                'https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+            ];
+            
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+
+        preloadImages();
+
+        const featureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.5 + 's';
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            featureObserver.observe(card);
+        });
+    </script>
+</body>
+</html>
