@@ -469,6 +469,21 @@
             color: var(--primary-color);
         }
 
+        /* Mobile cart item styling */
+        .mobile-cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-cart-label {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
         .mobile-dropdown-menu {
             list-style: none;
             padding: 0;
@@ -1730,9 +1745,10 @@
                 padding: 12px 45px 12px 15px;
             }
 
+            /* MOBILE: One product per row */
             .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .product-content {
@@ -2031,9 +2047,13 @@
             <li><a href="/blog.html" onclick="closeMobileMenu()">Blog</a></li>
             <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
             <li>
-                <a href="javascript:void(0)" onclick="toggleCart(); closeMobileMenu();">
-                    <i class="fas fa-shopping-cart"></i> Cart (<span id="mobileCartCounter">0</span>)
-                </a>
+                <div class="mobile-cart-item">
+                    <span class="mobile-cart-label">Shopping Cart</span>
+                    <button class="nav-cart-icon" onclick="toggleCart(); closeMobileMenu();" title="View Cart" style="margin-left: 0; width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-counter" id="mobileCartCounterIcon">0</span>
+                    </button>
+                </div>
             </li>
         </ul>
         <div class="mobile-contact">
@@ -2375,9 +2395,14 @@
                 }
 
                 // Update mobile cart counter
-                const mobileCounter = document.getElementById('mobileCartCounter');
+                const mobileCounter = document.getElementById('mobileCartCounterIcon');
                 if (mobileCounter) {
                     mobileCounter.textContent = count;
+                    if (count > 0) {
+                        mobileCounter.classList.add('has-items');
+                    } else {
+                        mobileCounter.classList.remove('has-items');
+                    }
                 }
 
                 // Update cart sidebar
@@ -3141,4 +3166,4 @@
         });
     </script>
 </body>
-</html>s
+</html>
