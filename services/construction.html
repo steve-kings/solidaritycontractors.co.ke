@@ -876,6 +876,118 @@
             color: white;
         }
 
+        /* Gallery Section */
+        .gallery-section {
+            padding: 120px 0;
+            background: var(--light-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-large);
+        }
+
+        .gallery-item-large {
+            grid-row: span 2;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.8) 0%, rgba(239, 68, 68, 0.6) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-content {
+            color: white;
+        }
+
+        .gallery-content h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gallery-content p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .gallery-category {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+        }
+
+        .gallery-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
         /* Stats Section */
         .stats-section {
             padding: 100px 0;
@@ -937,7 +1049,7 @@
         /* Content Sections */
         .content-section {
             padding: 120px 0;
-            background: var(--light-color);
+            background: white;
         }
 
         .content-row {
@@ -1237,6 +1349,15 @@
             .content-image {
                 height: 300px;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 250px;
+            }
+
+            .gallery-item-large {
+                grid-row: span 1;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1257,6 +1378,11 @@
 
             .mobile-sidebar {
                 width: 280px;
+            }
+
+            .gallery-grid {
+                gap: 15px;
+                grid-auto-rows: 200px;
             }
         }
     </style>
@@ -1588,6 +1714,160 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="scroll-reveal">
+                <h2 class="section-title">Our Project Gallery</h2>
+                <p class="section-subtitle">Explore our portfolio of completed construction projects showcasing quality craftsmanship and attention to detail.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal-left">
+                    <div class="gallery-image" style="background-image: url('/images/african-american-lady-safety-helmet-with-notebook-near-building-construction.jpg')" data-category="residential">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Modern Family Home</h4>
+                                <p>Contemporary residential construction with premium finishes</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-up">
+                    <div class="gallery-image" style="background-image: url('/images/working-housing-project.jpg')" data-category="commercial">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Office Complex</h4>
+                                <p>Multi-story commercial building with modern amenities</p>
+                                <span class="gallery-category">Commercial</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-right">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250604-WA0017.jpg')" data-category="residential">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Luxury Villa</h4>
+                                <p>High-end residential construction with custom design</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item gallery-item-large scroll-reveal-zoom">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250604-WA0017.jpg')" data-category="renovation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Historic Renovation</h4>
+                                <p>Complete restoration of heritage building with modern upgrades</p>
+                                <span class="gallery-category">Renovation</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-left">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250604-WA0023.jpg')" data-category="commercial">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Shopping Center</h4>
+                                <p>Retail complex with modern design and infrastructure</p>
+                                <span class="gallery-category">Commercial</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-up">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250605-WA0012.jpg')" data-category="residential">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Contemporary Home</h4>
+                                <p>Modern architectural design with sustainable features</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-right">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250604-WA0020.jpg')" data-category="construction">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Construction Progress</h4>
+                                <p>Behind the scenes of our professional construction process</p>
+                                <span class="gallery-category">Process</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item scroll-reveal-zoom">
+                    <div class="gallery-image" style="background-image: url('/images/IMG-20250604-WA0015.jpg')" data-category="residential">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Apartment Complex</h4>
+                                <p>Multi-unit residential development with premium amenities</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <a href="projects.html" class="gallery-btn">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-cta text-center mt-5">
+                <a href="projects.html" class="btn-service">
+                    <i class="fas fa-images"></i>View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
@@ -1688,7 +1968,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5><img src="https://pfst.cf2.poecdn.net/base/image/3041caa2bbdf9b7b6d3a18451dd92d4d71c4be09aa7a53628e0ff5d917f26efc?w=300&h=95" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
+                    <h5><img src="/sbl logo 1.jpg" alt="SBLC Logo" style="height: 30px; width: auto; margin-right: 8px;">Solidarity Building & Landscape Contractors Ltd</h5>
                     <p>"At Your Service With Lots of Love and Passion"</p>
                     <p>Professional construction services in Nyeri. Building quality homes and commercial properties with 11+ years of experience and commitment to excellence.</p>
                     <div class="social-links">

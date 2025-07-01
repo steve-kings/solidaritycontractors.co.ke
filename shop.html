@@ -294,27 +294,33 @@
             color: var(--primary-color);
         }
 
-        /* Cart Icon in Navigation */
+        /* Enhanced Cart Icon in Navigation */
         .nav-cart-icon {
             position: relative;
             background: var(--primary-color);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: none;
-            font-size: 1rem;
+            border: 2px solid white;
+            font-size: 1.1rem;
             margin-left: 15px;
+            box-shadow: var(--shadow-medium);
         }
 
         .nav-cart-icon:hover {
             background: var(--secondary-color);
             transform: scale(1.1);
+            box-shadow: var(--shadow-large);
+        }
+
+        .nav-cart-icon:active {
+            transform: scale(0.95);
         }
 
         .cart-counter {
@@ -324,13 +330,25 @@
             background: var(--secondary-color);
             color: white;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
+            width: 22px;
+            height: 22px;
+            display: none;
             align-items: center;
             justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 2px solid white;
+            animation: cartPulse 0.3s ease;
+        }
+
+        @keyframes cartPulse {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .cart-counter.has-items {
+            display: flex;
         }
 
         /* Mobile Menu Toggle */
@@ -1160,7 +1178,7 @@
             margin-top: auto;
         }
 
-        /* Cart Sidebar */
+        /* Enhanced Cart Sidebar */
         .cart-sidebar {
             position: fixed;
             top: 0;
@@ -1211,6 +1229,9 @@
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .cart-close {
@@ -1237,6 +1258,18 @@
             gap: 15px;
             padding: 20px 0;
             border-bottom: 1px solid var(--border-color);
+            animation: slideInCart 0.3s ease;
+        }
+
+        @keyframes slideInCart {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .cart-item-image {
@@ -1246,6 +1279,7 @@
             background-size: cover;
             background-position: center;
             flex-shrink: 0;
+            border: 1px solid var(--border-color);
         }
 
         .cart-item-details {
@@ -1257,6 +1291,7 @@
             margin-bottom: 8px;
             color: var(--dark-color);
             font-size: 0.95rem;
+            line-height: 1.3;
         }
 
         .cart-item-price {
@@ -1917,7 +1952,7 @@
         </div>
     </div>
 
-    <!-- Main Navigation - Same as homepage with cart icon -->
+    <!-- Main Navigation - Same as homepage with enhanced cart icon -->
     <nav class="main-nav">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -1949,7 +1984,7 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li>
-                        <button class="nav-cart-icon" onclick="toggleCart()">
+                        <button class="nav-cart-icon" onclick="toggleCart()" title="View Cart">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-counter" id="cartCounter">0</span>
                         </button>
@@ -1995,6 +2030,11 @@
             <li><a href="shop.html" onclick="closeMobileMenu()">Shop</a></li>
             <li><a href="/blog.html" onclick="closeMobileMenu()">Blog</a></li>
             <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleCart(); closeMobileMenu();">
+                    <i class="fas fa-shopping-cart"></i> Cart (<span id="mobileCartCounter">0</span>)
+                </a>
+            </li>
         </ul>
         <div class="mobile-contact">
             <a href="tel:+254794894910" class="mobile-contact-btn">
@@ -2109,11 +2149,14 @@
         </div>
     </div>
 
-    <!-- Cart Sidebar -->
+    <!-- Enhanced Cart Sidebar -->
     <div class="cart-overlay" onclick="closeCart()"></div>
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h3 class="cart-title">Shopping Cart</h3>
+            <h3 class="cart-title">
+                <i class="fas fa-shopping-cart"></i>
+                Shopping Cart
+            </h3>
             <button class="cart-close" onclick="closeCart()">
                 <i class="fas fa-times"></i>
             </button>
@@ -2232,7 +2275,7 @@
         let modalImages = [];
 
         // ==========================================
-        // CART MANAGEMENT
+        // ENHANCED CART MANAGEMENT
         // ==========================================
         class CartManager {
             constructor() {
@@ -2260,6 +2303,9 @@
                 this.saveCartToStorage();
                 this.updateCartUI();
                 this.showToast(`${product.name} added to cart!`, 'success');
+                
+                // Animate cart icon
+                this.animateCartIcon();
             }
 
             removeItem(productId) {
@@ -2315,12 +2361,23 @@
             }
 
             updateCartUI() {
-                // Update cart counter
+                const count = this.getItemCount();
+                
+                // Update main cart counter
                 const counter = document.getElementById('cartCounter');
                 if (counter) {
-                    const count = this.getItemCount();
                     counter.textContent = count;
-                    counter.style.display = count > 0 ? 'flex' : 'none';
+                    if (count > 0) {
+                        counter.classList.add('has-items');
+                    } else {
+                        counter.classList.remove('has-items');
+                    }
+                }
+
+                // Update mobile cart counter
+                const mobileCounter = document.getElementById('mobileCartCounter');
+                if (mobileCounter) {
+                    mobileCounter.textContent = count;
                 }
 
                 // Update cart sidebar
@@ -2359,13 +2416,32 @@
                                 <button class="quantity-btn" onclick="cartManager.updateQuantity(${item.id}, ${item.quantity + 1})">
                                     <i class="fas fa-plus"></i>
                                 </button>
-                                <button class="cart-remove" onclick="cartManager.removeItem(${item.id})">
+                                <button class="cart-remove" onclick="cartManager.removeItem(${item.id})" title="Remove item">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
                 `;
+            }
+
+            animateCartIcon() {
+                const cartIcon = document.querySelector('.nav-cart-icon');
+                const counter = document.getElementById('cartCounter');
+                
+                if (cartIcon) {
+                    cartIcon.style.animation = 'cartPulse 0.3s ease';
+                    setTimeout(() => {
+                        cartIcon.style.animation = '';
+                    }, 300);
+                }
+                
+                if (counter && counter.classList.contains('has-items')) {
+                    counter.style.animation = 'cartPulse 0.3s ease';
+                    setTimeout(() => {
+                        counter.style.animation = '';
+                    }, 300);
+                }
             }
 
             getPlaceholderImage() {
@@ -2941,13 +3017,14 @@
             }
         }
 
-        // Cart management
+        // Enhanced Cart management
         function toggleCart() {
             const sidebar = document.getElementById('cartSidebar');
             const overlay = document.querySelector('.cart-overlay');
             
             sidebar.classList.add('active');
             overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeCart() {
@@ -2956,9 +3033,10 @@
             
             sidebar.classList.remove('active');
             overlay.classList.remove('active');
+            document.body.style.overflow = '';
         }
 
-        // WhatsApp Checkout
+        // Enhanced WhatsApp Checkout
         function proceedToCheckout() {
             if (cartManager.cart.length === 0) {
                 cartManager.showToast('Your cart is empty!', 'error');
@@ -2971,13 +3049,13 @@
             ).join('\n');
             
             const total = cartManager.getTotal();
-            const message = `Hello! I'd like to place an order:\n\n${cartSummary}\n\n*Total: KSH ${total.toLocaleString()}*\n\nPlease help me complete this order. Thank you!`;
+            const message = `Hello! I'd like to place an order from your shop:\n\n*ORDER SUMMARY:*\n${cartSummary}\n\n*TOTAL: KSH ${total.toLocaleString()}*\n\nPlease confirm availability and provide delivery details. Thank you!`;
             
             const phoneNumber = '254794894910';
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
             // Show success message
-            cartManager.showToast('Redirecting to WhatsApp...', 'success');
+            cartManager.showToast('Opening WhatsApp...', 'success');
             
             // Open WhatsApp
             window.open(whatsappUrl, '_blank');
@@ -2987,7 +3065,7 @@
             
             // Optional: Clear cart after successful order
             setTimeout(() => {
-                if (confirm('Order sent! Would you like to clear your cart?')) {
+                if (confirm('Order sent to WhatsApp! Would you like to clear your cart?')) {
                     cartManager.clearCart();
                 }
             }, 2000);
@@ -2996,7 +3074,7 @@
         // WhatsApp contact
         function contactAboutProduct(productName, price) {
             const phoneNumber = '254794894910';
-            const message = `Hello! I'm interested in: ${productName} (Price: KSH ${price}). Can you provide more information and help me place an order?`;
+            const message = `Hello! I'm interested in: *${productName}* (Price: KSH ${price})\n\nCan you provide more information and help me place an order?`;
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
@@ -3046,6 +3124,11 @@
             }
         });
 
+        // Close cart when clicking overlay
+        document.querySelector('.cart-overlay').addEventListener('click', function() {
+            closeCart();
+        });
+
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
             // Load initial products
@@ -3058,4 +3141,4 @@
         });
     </script>
 </body>
-</html>
+</html>s
