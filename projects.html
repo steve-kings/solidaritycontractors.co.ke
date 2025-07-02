@@ -911,29 +911,8 @@
         }
 
         .gallery-content p {
-            margin-bottom: 20px;
+            margin-bottom: 0;
             opacity: 0.9;
-        }
-
-        .gallery-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .gallery-btn:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: scale(1.1);
         }
 
         .load-more-btn {
@@ -955,80 +934,6 @@
         .load-more-btn:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-large);
-        }
-
-        /* Lightbox Styles */
-        .lightbox-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 3000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .lightbox-modal.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-large);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 3001;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox-close:hover {
-            background: var(--secondary-color);
-        }
-
-        .lightbox-content img {
-            width: 100%;
-            height: auto;
-            max-height: 70vh;
-            object-fit: contain;
-        }
-
-        .lightbox-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .lightbox-info h4 {
-            font-family: 'Playfair Display', serif;
-            color: var(--dark-color);
-            margin-bottom: 10px;
-        }
-
-        .lightbox-info p {
-            color: var(--text-light);
-            margin: 0;
         }
 
         /* Footer */
@@ -1669,14 +1574,11 @@
                 <!-- Construction Images -->
                 <div class="gallery-item construction" data-category="construction">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop" alt="Modern House Construction" loading="lazy">
+                        <img src="/images/IMG_6640.jpg" alt="Modern House Construction" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Modern House Construction</h4>
                                 <p>Residential Building Project</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop', 'Modern House Construction', 'Residential Building Project')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -1684,14 +1586,11 @@
 
                 <div class="gallery-item construction" data-category="construction">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="Commercial Building" loading="lazy">
+                        <img src="/images/IMG_6624.jpg" alt="Commercial Building" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
-                                <h4>Commercial Complex</h4>
-                                <p>Office Building Construction</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop', 'Commercial Complex', 'Office Building Construction')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
+                                <h4>residential Complex</h4>
+                                <p> Building Construction</p>
                             </div>
                         </div>
                     </div>
@@ -1699,14 +1598,11 @@
 
                 <div class="gallery-item construction" data-category="construction">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Villa Construction" loading="lazy">
+                        <img src="/images/IMG_6637.jpg" alt="Villa Construction" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
-                                <h4>Luxury Villa</h4>
-                                <p>High-End Residential Project</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop', 'Luxury Villa', 'High-End Residential Project')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
+                                <h4>Church project</h4>
+                                <p>High-End church Project</p>
                             </div>
                         </div>
                     </div>
@@ -1715,14 +1611,11 @@
                 <!-- Landscaping Images -->
                 <div class="gallery-item landscaping" data-category="landscaping">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop" alt="Garden Design" loading="lazy">
+                        <img src="/images/slb/IMG_6344.jpg" alt="Garden Design" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Beautiful Garden Design</h4>
                                 <p>Residential Landscaping</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=800&fit=crop', 'Beautiful Garden Design', 'Residential Landscaping')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -1730,14 +1623,11 @@
 
                 <div class="gallery-item landscaping" data-category="landscaping">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Plant Nursery" loading="lazy">
+                        <img src="/images/slb/IMG_6345.jpg" alt="Plant Nursery" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Plant Nursery</h4>
                                 <p>Premium Plant Collection</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop', 'Plant Nursery', 'Premium Plant Collection')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -1750,9 +1640,6 @@
                             <div class="gallery-content">
                                 <h4>Commercial Landscaping</h4>
                                 <p>Corporate Garden Design</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&h=800&fit=crop', 'Commercial Landscaping', 'Corporate Garden Design')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -1761,14 +1648,11 @@
                 <!-- Events Images -->
                 <div class="gallery-item events" data-category="events">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=400&fit=crop" alt="Wedding Setup" loading="lazy">
+                        <img src="/images/tent 16.jpg" alt="Wedding Setup" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Elegant Wedding Setup</h4>
-                                <p>Complete Wedding Services</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=800&fit=crop', 'Elegant Wedding Setup', 'Complete Wedding Services')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
+                                <p>Complete Wedding tent, mobile toilets and chairs hireServices</p>
                             </div>
                         </div>
                     </div>
@@ -1776,14 +1660,11 @@
 
                 <div class="gallery-item events" data-category="events">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&h=400&fit=crop" alt="Corporate Event" loading="lazy">
+                        <img src="/images/tent 23.jpg" alt="Corporate Event" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Corporate Event</h4>
-                                <p>Professional Event Management</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1200&h=800&fit=crop', 'Corporate Event', 'Professional Event Management')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
+                                <p>Professional tents Event setup</p>
                             </div>
                         </div>
                     </div>
@@ -1791,14 +1672,11 @@
 
                 <div class="gallery-item events" data-category="events">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="Outdoor Event" loading="lazy">
+                        <img src="/images/tent 4.jpg" alt="Outdoor Event" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Outdoor Celebration</h4>
                                 <p>Tent & Decoration Services</p>
-                                <button class="gallery-btn" onclick="openLightbox('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&h=800&fit=crop', 'Outdoor Celebration', 'Tent & Decoration Services')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -1813,20 +1691,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">
-                <i class="fas fa-times"></i>
-            </button>
-            <img id="lightboxImage" src="" alt="">
-            <div class="lightbox-info">
-                <h4 id="lightboxTitle"></h4>
-                <p id="lightboxDescription"></p>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1986,54 +1850,26 @@
             });
         });
 
-        // Lightbox Functions
-        function openLightbox(imageUrl, title, description) {
-            const modal = document.getElementById('lightboxModal');
-            const image = document.getElementById('lightboxImage');
-            const titleEl = document.getElementById('lightboxTitle');
-            const descEl = document.getElementById('lightboxDescription');
-            
-            image.src = imageUrl;
-            titleEl.textContent = title;
-            descEl.textContent = description;
-            
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const modal = document.getElementById('lightboxModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close lightbox on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-
         // Load More Images Function
         function loadMoreImages() {
             const additionalImages = [
                 {
                     category: 'construction',
-                    src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop',
+                    src: '/images/IMG_6621.jpg',
                     title: 'Multi-Story Building',
                     description: 'Commercial Construction Project'
                 },
                 {
                     category: 'landscaping',
-                    src: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=600&h=400&fit=crop',
+                    src: '/images/landscape 3.jpg',
                     title: 'Garden Pathway',
                     description: 'Landscape Design & Installation'
                 },
                 {
                     category: 'events',
-                    src: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop',
+                    src: '/images/tent\ 15.jpg',
                     title: 'Party Setup',
-                    description: 'Birthday Event Services'
+                    description: ' Event Services'
                 }
             ];
 
@@ -2051,9 +1887,6 @@
                             <div class="gallery-content">
                                 <h4>${img.title}</h4>
                                 <p>${img.description}</p>
-                                <button class="gallery-btn" onclick="openLightbox('${img.src.replace('w=600&h=400', 'w=1200&h=800')}', '${img.title}', '${img.description}')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
